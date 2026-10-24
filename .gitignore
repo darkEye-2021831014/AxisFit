@@ -5,6 +5,9 @@ data/*
 # OS noise
 .DS_Store
 __MACOSX/
+*.swp
+*.swo
+*~
 
 # Model checkpoints
 *.pt

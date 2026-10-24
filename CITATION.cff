@@ -11,8 +11,8 @@ type: software
 version: 1.0.0
 date-released: "2026-10-24"
 license: MIT
-repository-code: "https://github.com/[OWNER]/recgym-axis-reduction"
-url: "https://github.com/[OWNER]/recgym-axis-reduction"
+repository-code: "https://github.com/darkEye-2021831014/AxisFit"
+url: "https://github.com/darkEye-2021831014/AxisFit"
 keywords:
   - wearable sensors
   - human activity recognition

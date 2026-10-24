@@ -4,7 +4,7 @@ Every table and figure in *"Placement-Specific Axis Reduction of Wearable Inerti
 
 **Important:** the paper's numbering (Table I–IV, Fig. 1–6) does **not** correspond to the file names (`Table01…TableS8`, `F1…F9`, `Fig01`, `Fig02`). The mapping below was established by reading the LaTeX source and matching captions and cell values against the CSV and PNG files.
 
-Paths are relative to the repository root.
+Paths are relative to the repository root ([`darkEye-2021831014/AxisFit`](https://github.com/darkEye-2021831014/AxisFit)).
 
 ---
 

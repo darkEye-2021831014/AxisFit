@@ -63,8 +63,8 @@ Notebook 02 requires a GPU for the full grid (it raises by default on CPU unless
 ## Reproducing the results
 
 ```bash
-git clone <this-repository>
-cd recgym-axis-reduction
+git clone https://github.com/darkEye-2021831014/AxisFit.git
+cd AxisFit
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
@@ -109,13 +109,13 @@ Everything reported in the paper can be recomputed from the files in `results/` 
 
 ## Data and code availability
 
-RecGym is available from the UCI Machine Learning Repository (UCI id 1128, DOI [10.24432/C5PW4K](https://doi.org/10.24432/C5PW4K), CC BY 4.0). The analysis code, protocol manifests and per-cell results are available in this repository and will be archived with a versioned DOI on Zenodo: **[Zenodo DOI to be inserted after release]**.
+RecGym is available from the UCI Machine Learning Repository (UCI id 1128, DOI [10.24432/C5PW4K](https://doi.org/10.24432/C5PW4K), CC BY 4.0). The analysis code, protocol manifests and per-cell results are available at <https://github.com/darkEye-2021831014/AxisFit> and will be archived with a versioned DOI on Zenodo: **[Zenodo DOI to be inserted after release]**.
 
 ---
 
 ## Citation
 
-If you use this work, please cite the paper. A `CITATION.cff` file is included; the repository URL and versioned DOI will be filled in at release.
+If you use this work, please cite the paper. A `CITATION.cff` file is included; the versioned Zenodo DOI will be added once the archive record is published.
 
 > A. Islam, *"Placement-Specific Axis Reduction of Wearable Inertial Sensors for Gym Exercise Recognition,"* IEEE Sensors Journal, under review.
 
