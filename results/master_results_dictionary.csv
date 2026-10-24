@@ -1,0 +1,22 @@
+column,definition
+placement,"Sensor position: leg (documented as calf), pocket, wrist"
+axis_config,One of 15 axis subsets
+axis_channels,"Channels used, joined by +; device-frame axes"
+n_channels,"Number of IMU channels (1,2,3,6)"
+model,"RF, SVM, XGB, CNN"
+macro_f1_mean/sd/median/min/max,"Over the 10 LOSO folds (one fold = one held-out subject). Primary metric: macro-F1 over the 12 labels, restricted to classes present in the held-out subject (all 12 are present in every fold)"
+"accuracy_mean, weighted_f1_mean",Mean over 10 folds
+"precision_mean, recall_mean","Macro precision and macro recall, mean over 10 folds"
+macro_f1_retained_pct,100 x mean macro-F1 of this config / mean macro-F1 of 6-axis (same placement and model)
+macro_f1_diff_vs_6axis,Mean paired difference to 6-axis (equals difference of means); negative = worse
+params,"CNN: exact parameter count. Classical: n_params_proxy from notebook 01 (a proxy, see params_type), not a true parameter count"
+model_size_kb,Mean serialized model size over folds (KB). Classical sizes vary by fold and by tree/support-vector count
+latency_ms_mean/sd,"Single-window, batch 1, 1 CPU thread, over folds. Classical (notebook 01): includes feature extraction + predict, CPU model not recorded. CNN (notebook 02): slice + z-score + forward on Colab Xeon @ 2.00 GHz. Not edge-device latency; classical vs CNN not directly comparable"
+n_loso_folds,Always 10
+null_included,True: Null is one of the 12 labels in the primary metric
+primary_metric,Definition of macro_f1 used in this file
+data_rate_hz,n_channels x 20 Hz
+macro_f1_workouts_mean,"Null-excluded sensitivity metric (11 workouts), mean over folds"
+diff_ci_lo/hi,Percentile bootstrap 95% CI of the paired difference to 6-axis over the 10 subjects (blank for 6-axis)
+"p_holm_family, sig_holm_family","Wilcoxon signed-rank vs 6-axis, Holm-adjusted within placement x model (14 tests); sig = p < 0.05. Smallest possible p at n=10 is 0.00195"
+training_seeds,1 for every model (CNN seed 42; classical seed 42)

@@ -1,0 +1,1 @@
+CNN latency: batch 1, 1 CPU thread, Intel(R) Xeon(R) CPU @ 2.00GHz (2 cores), includes slicing, z-score and forward pass. Classical latency: notebook 01, CPU model not recorded, includes feature extraction and predict. Colab CPUs vary between sessions; not edge-device performance.

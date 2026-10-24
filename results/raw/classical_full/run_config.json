@@ -1,0 +1,87 @@
+{
+  "hash": "7d8a6850660e83afca1a9d829d54ef68fa70eca5c80b198e089258db63d6c973",
+  "design": {
+    "window_samples": 80,
+    "step": 40,
+    "fs": 20,
+    "features": [
+      "mean",
+      "std",
+      "min",
+      "max",
+      "median",
+      "iqr",
+      "rms",
+      "skew",
+      "kurt",
+      "mad",
+      "zcr",
+      "dom_freq",
+      "spec_energy",
+      "spec_entropy",
+      "spec_centroid"
+    ],
+    "labels": [
+      "Adductor",
+      "ArmCurl",
+      "BenchPress",
+      "LegCurl",
+      "LegPress",
+      "Null",
+      "Riding",
+      "RopeSkipping",
+      "Running",
+      "Squat",
+      "StairClimber",
+      "Walking"
+    ],
+    "positions": [
+      "leg",
+      "pocket",
+      "wrist"
+    ],
+    "subjects": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "rf": {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt",
+      "class_weight": "balanced_subsample",
+      "n_jobs": -1,
+      "random_state": 42
+    },
+    "svm": {
+      "kernel": "rbf",
+      "C": 1.0,
+      "gamma": "scale",
+      "class_weight": "balanced",
+      "cache_size": 1000,
+      "random_state": 42
+    },
+    "svm_cap": 15000,
+    "xgb": {
+      "n_estimators": 300,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "tree_method": "hist",
+      "n_jobs": -1,
+      "random_state": 42
+    },
+    "data_sha256": "2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9",
+    "smoke": false,
+    "seed": 42
+  }
+}

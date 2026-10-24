@@ -1,0 +1,33 @@
+SMOKE_TEST = False | results dir: results/raw/classical_full
+SHA-256: 2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9
+Hash matches the audited file.
+Loaded: (4703320, 11) ['Subject', 'Position', 'Session', 'A_x', 'A_y', 'A_z', 'G_x', 'G_y', 'G_z', 'C_1', 'Workout']
+Roles: {'subject': 'Subject', 'label': 'Workout', 'position': 'Position', 'session': 'Session'} | channels: {'Ax': 'A_x', 'Ay': 'A_y', 'Az': 'A_z', 'Gx': 'G_x', 'Gy': 'G_y', 'Gz': 'G_z'}
+Subjects: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+Positions: ['leg', 'pocket', 'wrist']
+Labels: ['Adductor', 'ArmCurl', 'BenchPress', 'LegCurl', 'LegPress', 'Null', 'Riding', 'RopeSkipping', 'Running', 'Squat', 'StairClimber', 'Walking'] | null ids: [5]
+Sessions: ['1', '2', '3', '4', '5']
+Runs: 9589 | window = 80 samples, step = 40
+Windows: 105728 | rows dropped (runs shorter than window): 40743
+Feature unit tests passed. 15 features per channel.
+leg: windows=33272, feature matrix=(33272, 90)
+pocket: windows=35935, feature matrix=(35935, 90)
+wrist: windows=36521, feature matrix=(36521, 90)
+Features computed in 4.9 s
+Configs: ['6-axis', 'acc-3', 'gyro-3', 'acc-AxAy', 'acc-AxAz', 'acc-AyAz', 'gyro-GxGy', 'gyro-GxGz', 'gyro-GyGz', 'single-Ax', 'single-Ay', 'single-Az', 'single-Gx', 'single-Gy', 'single-Gz'] | folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | positions: ['leg', 'pocket', 'wrist'] | models: ['RF', 'SVM', 'XGB']
+Units already completed: 1040
+[1041/1350] wrist fold=3 acc-3 XGB: macroF1=0.823 fit=30.9s | elapsed 0.5 min, ETA ~ 169.3 min
+[1065/1350] wrist fold=3 single-Ax XGB: macroF1=0.591 fit=13.0s | elapsed 8.9 min, ETA ~ 101.8 min
+[1090/1350] wrist fold=4 acc-AxAy RF: macroF1=0.770 fit=30.2s | elapsed 17.8 min, ETA ~ 92.8 min
+[1115/1350] wrist fold=4 single-Az SVM: macroF1=0.540 fit=10.7s | elapsed 25.9 min, ETA ~ 81.1 min
+[1140/1350] wrist fold=5 acc-AxAz XGB: macroF1=0.796 fit=21.0s | elapsed 34.8 min, ETA ~ 73.0 min
+[1165/1350] wrist fold=5 single-Gy RF: macroF1=0.472 fit=19.7s | elapsed 42.4 min, ETA ~ 62.7 min
+[1190/1350] wrist fold=6 gyro-GxGy SVM: macroF1=0.652 fit=9.2s | elapsed 51.8 min, ETA ~ 55.2 min
+[1215/1350] wrist fold=6 single-Gz XGB: macroF1=0.682 fit=13.2s | elapsed 59.2 min, ETA ~ 45.6 min
+[1240/1350] wrist fold=7 gyro-GyGz RF: macroF1=0.792 fit=32.3s | elapsed 70.0 min, ETA ~ 38.5 min
+[1265/1350] wrist fold=8 acc-3 SVM: macroF1=0.811 fit=8.2s | elapsed 78.4 min, ETA ~ 29.6 min
+[1290/1350] wrist fold=8 single-Ax XGB: macroF1=0.702 fit=14.7s | elapsed 87.8 min, ETA ~ 21.1 min
+[1315/1350] wrist fold=9 acc-AxAy RF: macroF1=0.823 fit=33.7s | elapsed 97.6 min, ETA ~ 12.4 min
+[1340/1350] wrist fold=9 single-Az SVM: macroF1=0.418 fit=10.8s | elapsed 106.1 min, ETA ~ 3.5 min
+Loop finished. New units this session: 310 | total done: 1350 of 1350
+Rows in results.csv: 1350 | expected for this grid: 1350

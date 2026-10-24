@@ -1,0 +1,49 @@
+position,model,n_channels,best_config,mean_macro_f1,delta_vs_6axis,retained_pct,data_rate_Hz,data_rate_reduction_pct,latency_ms_median,runner_up,gap_to_runner_up,noninferior_margin_0p05,holm_significant_drop
+leg,RF,6,6-axis (reference),0.797,,100.0,120,0.0,13.13,,,,
+leg,RF,3,gyro-3,0.775,"-0.023 [-0.041, -0.007]",97.1,60,50.0,11.79,acc-3,0.055,yes,no
+leg,RF,2,gyro-GxGz,0.762,"-0.035 [-0.055, -0.017]",95.6,40,66.7,11.42,gyro-GyGz,0.01,no,yes
+leg,RF,1,single-Gz,0.723,"-0.075 [-0.113, -0.041]",90.6,20,83.3,11.07,single-Ax,0.082,no,yes
+leg,SVM,6,6-axis (reference),0.786,,100.0,120,0.0,3.92,,,,
+leg,SVM,3,gyro-3,0.753,"-0.033 [-0.044, -0.022]",95.8,60,50.0,2.52,acc-3,0.054,yes,yes
+leg,SVM,2,gyro-GxGz,0.727,"-0.059 [-0.075, -0.045]",92.5,40,66.7,1.96,gyro-GyGz,0.008,no,yes
+leg,SVM,1,single-Gz,0.679,"-0.107 [-0.136, -0.081]",86.3,20,83.3,1.45,single-Ax,0.076,no,yes
+leg,XGB,6,6-axis (reference),0.854,,100.0,120,0.0,3.58,,,,
+leg,XGB,3,gyro-3,0.822,"-0.032 [-0.046, -0.018]",96.2,60,50.0,2.39,acc-3,0.031,yes,yes
+leg,XGB,2,gyro-GxGz,0.794,"-0.060 [-0.079, -0.041]",93.0,40,66.7,1.99,gyro-GyGz,0.008,no,yes
+leg,XGB,1,single-Gz,0.742,"-0.112 [-0.142, -0.084]",86.9,20,83.3,1.6,single-Ax,0.06,no,yes
+leg,CNN,6,6-axis (reference),0.812,,100.0,120,0.0,0.44,,,,
+leg,CNN,3,gyro-3,0.795,"-0.017 [-0.031, -0.004]",97.9,60,50.0,0.43,acc-3,0.05,yes,yes
+leg,CNN,2,gyro-GxGz,0.767,"-0.045 [-0.062, -0.025]",94.5,40,66.7,0.43,gyro-GyGz,0.005,no,yes
+leg,CNN,1,single-Gz,0.739,"-0.073 [-0.100, -0.043]",91.1,20,83.3,0.42,single-Ax,0.055,no,yes
+pocket,RF,6,6-axis (reference),0.547,,100.0,120,0.0,13.06,,,,
+pocket,RF,3,acc-3,0.522,"-0.025 [-0.050, +0.006]",95.4,60,50.0,11.79,gyro-3,0.068,no,no
+pocket,RF,2,acc-AxAy,0.513,"-0.033 [-0.058, -0.003]",93.9,40,66.7,11.49,acc-AxAz,0.02,no,no
+pocket,RF,1,single-Ax,0.468,"-0.079 [-0.117, -0.041]",85.5,20,83.3,11.28,single-Ay,0.044,no,no
+pocket,SVM,6,6-axis (reference),0.595,,100.0,120,0.0,4.16,,,,
+pocket,SVM,3,acc-3,0.551,"-0.044 [-0.074, -0.013]",92.5,60,50.0,2.79,gyro-3,0.069,no,yes
+pocket,SVM,2,acc-AxAy,0.52,"-0.074 [-0.110, -0.038]",87.5,40,66.7,2.24,acc-AxAz,0.021,no,yes
+pocket,SVM,1,single-Ax,0.451,"-0.144 [-0.178, -0.106]",75.7,20,83.3,1.69,single-Gz,0.039,no,yes
+pocket,XGB,6,6-axis (reference),0.687,,100.0,120,0.0,3.68,,,,
+pocket,XGB,3,acc-3,0.635,"-0.052 [-0.076, -0.024]",92.4,60,50.0,2.44,gyro-3,0.08,no,yes
+pocket,XGB,2,acc-AxAy,0.599,"-0.089 [-0.115, -0.059]",87.1,40,66.7,2.04,acc-AxAz,0.014,no,yes
+pocket,XGB,1,single-Ax,0.517,"-0.170 [-0.208, -0.129]",75.2,20,83.3,1.64,single-Ay,0.05,no,yes
+pocket,CNN,6,6-axis (reference),0.653,,100.0,120,0.0,0.43,,,,
+pocket,CNN,3,acc-3,0.619,"-0.034 [-0.065, -0.002]",94.8,60,50.0,0.43,gyro-3,0.082,no,no
+pocket,CNN,2,acc-AxAz,0.576,"-0.077 [-0.115, -0.043]",88.2,40,66.7,0.42,acc-AxAy,0.003,no,yes
+pocket,CNN,1,single-Ax,0.517,"-0.136 [-0.170, -0.106]",79.2,20,83.3,0.42,single-Gz,0.015,no,yes
+wrist,RF,6,6-axis (reference),0.886,,100.0,120,0.0,13.17,,,,
+wrist,RF,3,acc-3,0.788,"-0.098 [-0.120, -0.079]",88.9,60,50.0,12.07,gyro-3,0.008,no,yes
+wrist,RF,2,acc-AxAy,0.764,"-0.122 [-0.157, -0.094]",86.2,40,66.7,11.35,acc-AxAz,0.022,no,yes
+wrist,RF,1,single-Gz,0.622,"-0.264 [-0.306, -0.230]",70.2,20,83.3,11.09,single-Ax,0.038,no,yes
+wrist,SVM,6,6-axis (reference),0.85,,100.0,120,0.0,3.52,,,,
+wrist,SVM,3,acc-3,0.75,"-0.100 [-0.113, -0.085]",88.3,60,50.0,2.06,gyro-3,0.03,no,yes
+wrist,SVM,2,acc-AxAy,0.726,"-0.124 [-0.145, -0.100]",85.4,40,66.7,1.68,acc-AxAz,0.024,no,yes
+wrist,SVM,1,single-Gz,0.599,"-0.251 [-0.287, -0.219]",70.5,20,83.3,1.19,single-Ax,0.028,no,yes
+wrist,XGB,6,6-axis (reference),0.935,,100.0,120,0.0,3.58,,,,
+wrist,XGB,3,acc-3,0.858,"-0.077 [-0.090, -0.064]",91.8,60,50.0,2.28,gyro-3,0.037,no,yes
+wrist,XGB,2,acc-AxAy,0.815,"-0.120 [-0.143, -0.099]",87.2,40,66.7,2.01,acc-AxAz,0.007,no,yes
+wrist,XGB,1,single-Gz,0.664,"-0.271 [-0.300, -0.245]",71.1,20,83.3,1.67,single-Ax,0.024,no,yes
+wrist,CNN,6,6-axis (reference),0.932,,100.0,120,0.0,0.42,,,,
+wrist,CNN,3,acc-3,0.874,"-0.058 [-0.068, -0.049]",93.8,60,50.0,0.41,gyro-3,0.055,no,yes
+wrist,CNN,2,acc-AxAz,0.84,"-0.092 [-0.105, -0.077]",90.2,40,66.7,0.41,acc-AxAy,0.014,no,yes
+wrist,CNN,1,single-Gz,0.707,"-0.225 [-0.254, -0.197]",75.9,20,83.3,0.41,single-Ax,0.021,no,yes
