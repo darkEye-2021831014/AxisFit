@@ -1,0 +1,25 @@
+# Data (not redistributed; see data/README.md)
+data/*
+!data/README.md
+
+# OS noise
+.DS_Store
+__MACOSX/
+
+# Model checkpoints
+*.pt
+*.ckpt
+*.pth
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Archives
+*.zip
+
+# Local environment
+.env

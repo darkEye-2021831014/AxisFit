@@ -1,0 +1,29 @@
+# Requirements for the RecGym axis-reduction analysis.
+#
+# Versions below are the ones recorded in the environment.json files of the
+# runs that produced the published results:
+#   results/raw/classical_full/environment.json
+#   results/raw/cnn_full/environment.json
+#   results/analysis_checks/checks/analysis_manifest.json
+#
+# GUESSED entries (marked below) are packages that are imported by a notebook
+# but whose version was not captured in any environment.json.
+
+numpy==2.1.3
+pandas==2.2.3
+scikit-learn==1.6.1
+xgboost==3.4.1
+torch==2.11.0
+scipy==1.16.3          # recorded in results/analysis_checks/checks/analysis_manifest.json
+matplotlib==3.10.0
+joblib==1.6.0
+pyarrow==23.0.1
+
+# Fetched by notebook 00 when RecGym.csv is not present locally.
+ucimlrepo==0.0.7      # GUESSED: installed on demand by notebook 00 via pip;
+                       # version not recorded in any environment.json
+
+# Notebook execution (not needed for the analysis itself)
+ipykernel==6.29.5    # GUESSED
+nbformat==5.10.4      # GUESSED
+jupyterlab==4.3.5     # GUESSED

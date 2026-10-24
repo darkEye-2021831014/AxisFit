@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or the results it produces, please cite the associated paper."
+title: "Placement-Specific Axis Reduction of Wearable Inertial Sensors for Gym Exercise Recognition"
+abstract: >-
+  Evaluation of 15 axis configurations, from the full six-axis inertial set
+  through every three-axis subset, sensor pair and single axis, on the public
+  RecGym dataset at three body positions (wrist, pocket, calf), scored by
+  macro-F1 under leave-one-subject-out validation. Axis-level reduction is
+  shown to be a placement-specific decision rather than a universal saving.
+type: software
+version: 1.0.0
+date-released: "2026-10-24"
+license: MIT
+repository-code: "https://github.com/[OWNER]/recgym-axis-reduction"
+url: "https://github.com/[OWNER]/recgym-axis-reduction"
+keywords:
+  - wearable sensors
+  - human activity recognition
+  - gym exercise recognition
+  - inertial sensors
+  - sensor reduction
+  - leave-one-subject-out validation
+  - RecGym
+authors:
+  - family-names: Islam
+    given-names: Ashraful
+    affiliation: "Shahjalal University of Science and Technology"
