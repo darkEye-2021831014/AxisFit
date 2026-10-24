@@ -1,0 +1,372 @@
+{
+  "data_file": "data/RecGym.csv",
+  "data_sha256": "2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9",
+  "raw_shape": [
+    4703320,
+    11
+  ],
+  "raw_columns": [
+    "Subject",
+    "Position",
+    "Session",
+    "A_x",
+    "A_y",
+    "A_z",
+    "G_x",
+    "G_y",
+    "G_z",
+    "C_1",
+    "Workout"
+  ],
+  "columns_used": {
+    "subject": "Subject",
+    "label": "Workout",
+    "position": "Position",
+    "channels": {
+      "Ax": "A_x",
+      "Ay": "A_y",
+      "Az": "A_z",
+      "Gx": "G_x",
+      "Gy": "G_y",
+      "Gz": "G_z",
+      "C1": "C_1"
+    }
+  },
+  "n_subjects": 10,
+  "labels": [
+    "Adductor",
+    "ArmCurl",
+    "BenchPress",
+    "LegCurl",
+    "LegPress",
+    "Null",
+    "Riding",
+    "RopeSkipping",
+    "Running",
+    "Squat",
+    "StairClimber",
+    "Walking"
+  ],
+  "positions": [
+    "leg",
+    "pocket",
+    "wrist"
+  ],
+  "null_like_labels": [
+    "Null"
+  ],
+  "n_rows": 4703320,
+  "n_duplicate_rows": 2,
+  "imbalance_ratio_all": 49.07410684034183,
+  "imbalance_ratio_excl_null": 5.327711478372172,
+  "absent_combinations": [],
+  "n_runs": 9482,
+  "median_run_len_rows": 284.0,
+  "subject_position_blocks": 30,
+  "subject_position_groups": 30,
+  "window_feasibility": [
+    {
+      "window_s": 2,
+      "overlap": 0.0,
+      "position": "leg",
+      "total_windows": 35719,
+      "min_per_subject_class": 22,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 2,
+      "overlap": 0.0,
+      "position": "pocket",
+      "total_windows": 38682,
+      "min_per_subject_class": 31,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 2,
+      "overlap": 0.0,
+      "position": "wrist",
+      "total_windows": 39286,
+      "min_per_subject_class": 30,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 2,
+      "overlap": 0.5,
+      "position": "leg",
+      "total_windows": 70226,
+      "min_per_subject_class": 39,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 2,
+      "overlap": 0.5,
+      "position": "pocket",
+      "total_windows": 76054,
+      "min_per_subject_class": 53,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 2,
+      "overlap": 0.5,
+      "position": "wrist",
+      "total_windows": 77248,
+      "min_per_subject_class": 53,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 3,
+      "overlap": 0.0,
+      "position": "leg",
+      "total_windows": 23426,
+      "min_per_subject_class": 13,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 3,
+      "overlap": 0.0,
+      "position": "pocket",
+      "total_windows": 25369,
+      "min_per_subject_class": 18,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 3,
+      "overlap": 0.0,
+      "position": "wrist",
+      "total_windows": 25774,
+      "min_per_subject_class": 17,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 3,
+      "overlap": 0.5,
+      "position": "leg",
+      "total_windows": 45647,
+      "min_per_subject_class": 20,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 3,
+      "overlap": 0.5,
+      "position": "pocket",
+      "total_windows": 49348,
+      "min_per_subject_class": 29,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 3,
+      "overlap": 0.5,
+      "position": "wrist",
+      "total_windows": 50168,
+      "min_per_subject_class": 27,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 4,
+      "overlap": 0.0,
+      "position": "leg",
+      "total_windows": 17276,
+      "min_per_subject_class": 8,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 4,
+      "overlap": 0.0,
+      "position": "pocket",
+      "total_windows": 18662,
+      "min_per_subject_class": 12,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 4,
+      "overlap": 0.0,
+      "position": "wrist",
+      "total_windows": 18947,
+      "min_per_subject_class": 12,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 4,
+      "overlap": 0.5,
+      "position": "leg",
+      "total_windows": 33319,
+      "min_per_subject_class": 13,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 4,
+      "overlap": 0.5,
+      "position": "pocket",
+      "total_windows": 35988,
+      "min_per_subject_class": 17,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 4,
+      "overlap": 0.5,
+      "position": "wrist",
+      "total_windows": 36576,
+      "min_per_subject_class": 16,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 5,
+      "overlap": 0.0,
+      "position": "leg",
+      "total_windows": 13541,
+      "min_per_subject_class": 5,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 5,
+      "overlap": 0.0,
+      "position": "pocket",
+      "total_windows": 14622,
+      "min_per_subject_class": 7,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 5,
+      "overlap": 0.0,
+      "position": "wrist",
+      "total_windows": 14853,
+      "min_per_subject_class": 9,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 5,
+      "overlap": 0.5,
+      "position": "leg",
+      "total_windows": 25941,
+      "min_per_subject_class": 6,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 5,
+      "overlap": 0.5,
+      "position": "pocket",
+      "total_windows": 28000,
+      "min_per_subject_class": 8,
+      "n_cells_below_threshold": 0
+    },
+    {
+      "window_s": 5,
+      "overlap": 0.5,
+      "position": "wrist",
+      "total_windows": 28461,
+      "min_per_subject_class": 9,
+      "n_cells_below_threshold": 0
+    }
+  ],
+  "normalisation_pattern_heuristic": "no simple standardisation pattern detected (could be min-max, per-session, or other)",
+  "compute_plan": {
+    "n_folds": 10,
+    "n_positions": 3,
+    "n_configs": 15,
+    "n_models": 4,
+    "total_model_fits_primary_grid": 1800,
+    "note": "Nested subject-wise hyper-parameter search (if used) multiplies this further; plan the budget before running."
+  },
+  "flags": [
+    {
+      "status": "WARN",
+      "check": "Unexpected extra columns present",
+      "detail": "['Session']"
+    },
+    {
+      "status": "PASS",
+      "check": "10 subjects found",
+      "detail": "matches dataset documentation"
+    },
+    {
+      "status": "PASS",
+      "check": "position: no spelling/case variants",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "check": "label: no spelling/case variants",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "check": "12 labels found",
+      "detail": "matches documentation (11 workouts + null)"
+    },
+    {
+      "status": "PASS",
+      "check": "3 positions found",
+      "detail": "['leg', 'pocket', 'wrist']"
+    },
+    {
+      "status": "PASS",
+      "check": "No NaN / inf in any channel",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Duplicate rows",
+      "detail": "2 (0.000%) \u2014 not removed; row order is preserved"
+    },
+    {
+      "status": "PASS",
+      "check": "Constant channels",
+      "detail": "none"
+    },
+    {
+      "status": "WARN",
+      "check": "Row counts differ across positions for some subjects",
+      "detail": "positions may be unsynchronised; do not assume row i is the same instant across positions"
+    },
+    {
+      "status": "PASS",
+      "check": "Every subject has every label at every position",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "check": "In every LOSO fold, every test class appears in the training subjects",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Each (subject, position) is one contiguous block in the file",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "check": "File order looks temporal",
+      "detail": "median run = 284 rows (~14s at nominal rate)"
+    },
+    {
+      "status": "PASS",
+      "check": "Window 2s: subject\u00d7class\u00d7position cells with < 5 windows",
+      "detail": "0"
+    },
+    {
+      "status": "PASS",
+      "check": "Window 3s: subject\u00d7class\u00d7position cells with < 5 windows",
+      "detail": "0"
+    },
+    {
+      "status": "PASS",
+      "check": "Window 4s: subject\u00d7class\u00d7position cells with < 5 windows",
+      "detail": "0"
+    },
+    {
+      "status": "PASS",
+      "check": "Window 5s: subject\u00d7class\u00d7position cells with < 5 windows",
+      "detail": "0"
+    },
+    {
+      "status": "INFO",
+      "check": "Normalisation pattern (heuristic, verify in the RecGym paper)",
+      "detail": "no simple standardisation pattern detected (could be min-max, per-session, or other)"
+    },
+    {
+      "status": "PASS",
+      "check": "No channel shows heavy repeated-value behaviour",
+      "detail": ""
+    }
+  ]
+}
