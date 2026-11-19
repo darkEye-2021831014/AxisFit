@@ -1,0 +1,28 @@
+{
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "cuda": "13.0",
+  "cudnn_benchmark": true,
+  "cpu_for_latency": "Intel(R) Xeon(R) CPU @ 2.00GHz",
+  "cpu_count": 2,
+  "latency_threads": 1,
+  "latency_note": "single window, batch 1, 1 CPU thread, slice+z-score+forward; hardware above; NOT edge-device latency",
+  "seed_base": 42,
+  "seeds": [
+    42
+  ],
+  "smoke_test": false,
+  "packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "torch": "2.11.0+cu130"
+  },
+  "data_sha256": "2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9",
+  "windows_sha256": "d12f06d035e1259148d0eff38258a2df1aed571fcc6d31e33592386ff5c290d6",
+  "config_hash": "b4fcd438b26677a20086d9bb7081030b0ec7f813e1114e3de74959462dae1dc5",
+  "windows_verified_against_notebook_01": true,
+  "timestamp_utc": "2026-10-22T14:27:08.048147+00:00"
+}

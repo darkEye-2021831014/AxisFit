@@ -1,0 +1,25 @@
+Classical runs: {42: '/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_full', 43: '/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed43', 44: '/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed44'}
+CNN run (primary): /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_full | extra CNN seed folders: ['/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_seeds43-46_full']
+CNN file /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_full | rows: 450 | seeds: [42]
+CNN file /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_seeds43-46_full | rows: 1800 | seeds: [43, 44, 45, 46]
+Design check OK: cnn_seeds43-46_full has the same data hash, window hash, architecture and training settings as the primary CNN run.
+Models: ['RF', 'SVM', 'XGB', 'CNN'] | positions: ['leg', 'pocket', 'wrist'] | expected units per (model, seed): 450
+Complete seeds used: {'RF': [42, 43, 44], 'SVM': [42, 43, 44], 'XGB': [42, 43, 44], 'CNN': [42, 43, 44, 45, 46]}
+Cells with seed variability: 180 (expected 180 )
+Ten cells with the largest seed SD:
+Reduction tests: 756 rows | families of 14 (Holm) = 54
+Seed 42: 160 of 168 reductions are Holm-significant decreases; 4 meet the 0.05 margin
+Seed 43: 161 of 168 reductions are Holm-significant decreases; 3 meet the 0.05 margin
+Seed 44: 161 of 168 reductions are Holm-significant decreases; 5 meet the 0.05 margin
+Seed mean: 160 of 168 reductions are Holm-significant decreases; 5 meet the 0.05 margin
+Reductions that are not Holm-significant decreases in at least one seed: 11
+Seed 42 (4 model(s)): pairs meeting the 0.05 margin in all models -> leg:gyro-3
+Seed 43 (4 model(s)): pairs meeting the 0.05 margin in all models -> (none)
+Seed 44 (4 model(s)): pairs meeting the 0.05 margin in all models -> leg:gyro-3
+Seed 45 (1 model(s)): pairs meeting the 0.05 margin in all models -> leg:gyro-3
+Seed 46 (1 model(s)): pairs meeting the 0.05 margin in all models -> leg:gyro-3
+Seed mean (4 model(s)): pairs meeting the 0.05 margin in all models -> leg:gyro-3
+Seed 42 recomputed here reproduces 'only leg:gyro-3 meets the margin in all four models': True (a difference near the boundary can come from the bootstrap generator; see near_boundary in margin_claim_by_seed.csv)
+CNN units: 2250 | seeds: [np.int64(42), np.int64(43), np.int64(44), np.int64(45), np.int64(46)] | flagged (final_train_loss > 0.5 ): 422
+(position, configuration) cells with at least one flagged unit: 11 of 45
+Largest final_train_loss: 0.738 | flagged units by channel count: {1: 422, 2: 0, 3: 0, 6: 0}

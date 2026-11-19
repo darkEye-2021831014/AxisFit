@@ -1,0 +1,208 @@
+SMOKE_TEST = False | device: cuda | results dir: results/raw/cnn_seeds43-46/full | seeds: [43, 44, 45, 46] | data: /kaggle/input/datasets/chaoseye/axisfit/RecGym.csv
+GPU: Tesla T4
+SHA-256: 2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9
+Hash matches the audited file.
+Loaded: (4703320, 11) ['Subject', 'Position', 'Session', 'A_x', 'A_y', 'A_z', 'G_x', 'G_y', 'G_z', 'C_1', 'Workout']
+Roles: {'subject': 'Subject', 'label': 'Workout', 'position': 'Position', 'session': 'Session'} | channels: {'Ax': 'A_x', 'Ay': 'A_y', 'Az': 'A_z', 'Gx': 'G_x', 'Gy': 'G_y', 'Gz': 'G_z'}
+Subjects: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+Positions: ['leg', 'pocket', 'wrist']
+Labels: ['Adductor', 'ArmCurl', 'BenchPress', 'LegCurl', 'LegPress', 'Null', 'Riding', 'RopeSkipping', 'Running', 'Squat', 'StairClimber', 'Walking'] | null ids: [5]
+Sessions: ['1', '2', '3', '4', '5']
+Runs: 9589 | window = 80 samples, step = 40
+Windows: 105728 | window-start hash: d12f06d035e12591 ...
+WARNING: notebook 01's window index was not found at results/raw/classical/shared -> windows are rebuilt with the same code but could NOT be compared. Set CLASSICAL_ROOT if the files live elsewhere.
+leg: windows=33272, tensor=(33272, 6, 80)
+pocket: windows=35935, tensor=(35935, 6, 80)
+wrist: windows=36521, tensor=(36521, 6, 80)
+Configs: ['6-axis', 'acc-3', 'gyro-3', 'acc-AxAy', 'acc-AxAz', 'acc-AyAz', 'gyro-GxGy', 'gyro-GxGz', 'gyro-GyGz', 'single-Ax', 'single-Ay', 'single-Az', 'single-Gx', 'single-Gy', 'single-Gz'] | folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | positions: ['leg', 'pocket', 'wrist'] | seeds: [43, 44, 45, 46]
+Model (6 channels): 37772 parameters, 979456 MACs/window, 155 KB
+   1 channel(s): 36972 parameters, 915456 MACs/window
+   2 channel(s): 37132 parameters, 928256 MACs/window
+   3 channel(s): 37292 parameters, 941056 MACs/window
+Units already completed: 0
+Check 1 passed: normalisation statistics come from training subjects only.
+Check 2: label-shuffle control on leg fold 0: macro-F1 = 0.039 (chance ~ 0.083) in 18.5s
+[1/1800] leg fold=0 6-axis seed=43: macroF1=0.695 loss=0.164 fit=7.9s | elapsed 0.1 min, ETA ~ 248.2 min
+[10/1800] leg fold=0 gyro-3 seed=44: macroF1=0.763 loss=0.198 fit=8.1s | elapsed 1.4 min, ETA ~ 244.5 min
+[20/1800] leg fold=0 acc-AxAz seed=46: macroF1=0.666 loss=0.261 fit=8.5s | elapsed 2.8 min, ETA ~ 245.1 min
+[30/1800] leg fold=0 gyro-GxGz seed=44: macroF1=0.749 loss=0.215 fit=8.1s | elapsed 4.1 min, ETA ~ 243.4 min
+[40/1800] leg fold=0 single-Ax seed=46: macroF1=0.617 loss=0.348 fit=8.4s | elapsed 5.5 min, ETA ~ 241.8 min
+[50/1800] leg fold=0 single-Gx seed=44: macroF1=0.557 loss=0.447 fit=8.4s | elapsed 6.9 min, ETA ~ 241.2 min
+[60/1800] leg fold=0 single-Gz seed=46: macroF1=0.735 loss=0.276 fit=8.2s | elapsed 8.3 min, ETA ~ 239.9 min
+[70/1800] leg fold=1 gyro-3 seed=44: macroF1=0.744 loss=0.193 fit=8.1s | elapsed 9.6 min, ETA ~ 237.0 min
+[80/1800] leg fold=1 acc-AxAz seed=46: macroF1=0.742 loss=0.288 fit=7.8s | elapsed 10.9 min, ETA ~ 234.2 min
+[90/1800] leg fold=1 gyro-GxGz seed=44: macroF1=0.730 loss=0.217 fit=8.1s | elapsed 12.2 min, ETA ~ 231.9 min
+[100/1800] leg fold=1 single-Ax seed=46: macroF1=0.683 loss=0.389 fit=7.7s | elapsed 13.5 min, ETA ~ 229.8 min
+[110/1800] leg fold=1 single-Gx seed=44: macroF1=0.565 loss=0.454 fit=7.8s | elapsed 14.8 min, ETA ~ 227.8 min
+[120/1800] leg fold=1 single-Gz seed=46: macroF1=0.766 loss=0.279 fit=7.7s | elapsed 16.1 min, ETA ~ 225.9 min
+[130/1800] leg fold=2 gyro-3 seed=44: macroF1=0.883 loss=0.199 fit=8.0s | elapsed 17.5 min, ETA ~ 224.5 min
+[140/1800] leg fold=2 acc-AxAz seed=46: macroF1=0.773 loss=0.283 fit=7.8s | elapsed 18.8 min, ETA ~ 223.2 min
+[150/1800] leg fold=2 gyro-GxGz seed=44: macroF1=0.833 loss=0.223 fit=7.6s | elapsed 20.2 min, ETA ~ 221.7 min
+[160/1800] leg fold=2 single-Ax seed=46: macroF1=0.708 loss=0.367 fit=8.1s | elapsed 21.5 min, ETA ~ 220.3 min
+[170/1800] leg fold=2 single-Gx seed=44: macroF1=0.689 loss=0.465 fit=7.9s | elapsed 22.8 min, ETA ~ 218.9 min
+[180/1800] leg fold=2 single-Gz seed=46: macroF1=0.771 loss=0.284 fit=8.0s | elapsed 24.2 min, ETA ~ 217.6 min
+[190/1800] leg fold=3 gyro-3 seed=44: macroF1=0.771 loss=0.202 fit=8.3s | elapsed 25.6 min, ETA ~ 216.6 min
+[200/1800] leg fold=3 acc-AxAz seed=46: macroF1=0.752 loss=0.278 fit=8.3s | elapsed 26.9 min, ETA ~ 215.5 min
+[210/1800] leg fold=3 gyro-GxGz seed=44: macroF1=0.715 loss=0.222 fit=8.2s | elapsed 28.3 min, ETA ~ 214.4 min
+[220/1800] leg fold=3 single-Ax seed=46: macroF1=0.691 loss=0.374 fit=8.2s | elapsed 29.7 min, ETA ~ 213.2 min
+[230/1800] leg fold=3 single-Gx seed=44: macroF1=0.652 loss=0.476 fit=8.3s | elapsed 31.1 min, ETA ~ 212.1 min
+[240/1800] leg fold=3 single-Gz seed=46: macroF1=0.686 loss=0.275 fit=8.3s | elapsed 32.4 min, ETA ~ 210.9 min
+[250/1800] leg fold=4 gyro-3 seed=44: macroF1=0.783 loss=0.183 fit=8.1s | elapsed 33.8 min, ETA ~ 209.5 min
+[260/1800] leg fold=4 acc-AxAz seed=46: macroF1=0.764 loss=0.278 fit=8.0s | elapsed 35.1 min, ETA ~ 208.0 min
+[270/1800] leg fold=4 gyro-GxGz seed=44: macroF1=0.781 loss=0.213 fit=8.1s | elapsed 36.5 min, ETA ~ 206.6 min
+[280/1800] leg fold=4 single-Ax seed=46: macroF1=0.726 loss=0.365 fit=7.9s | elapsed 37.8 min, ETA ~ 205.2 min
+[290/1800] leg fold=4 single-Gx seed=44: macroF1=0.623 loss=0.448 fit=8.2s | elapsed 39.1 min, ETA ~ 203.8 min
+[300/1800] leg fold=4 single-Gz seed=46: macroF1=0.760 loss=0.274 fit=7.8s | elapsed 40.5 min, ETA ~ 202.4 min
+[310/1800] leg fold=5 gyro-3 seed=44: macroF1=0.795 loss=0.194 fit=8.4s | elapsed 41.9 min, ETA ~ 201.3 min
+[320/1800] leg fold=5 acc-AxAz seed=46: macroF1=0.691 loss=0.278 fit=8.1s | elapsed 43.3 min, ETA ~ 200.0 min
+[330/1800] leg fold=5 gyro-GxGz seed=44: macroF1=0.752 loss=0.218 fit=8.2s | elapsed 44.6 min, ETA ~ 198.8 min
+[340/1800] leg fold=5 single-Ax seed=46: macroF1=0.646 loss=0.358 fit=8.4s | elapsed 46.0 min, ETA ~ 197.6 min
+[350/1800] leg fold=5 single-Gx seed=44: macroF1=0.523 loss=0.453 fit=8.2s | elapsed 47.4 min, ETA ~ 196.4 min
+[360/1800] leg fold=5 single-Gz seed=46: macroF1=0.713 loss=0.276 fit=8.3s | elapsed 48.8 min, ETA ~ 195.2 min
+[370/1800] leg fold=6 gyro-3 seed=44: macroF1=0.815 loss=0.201 fit=7.7s | elapsed 50.1 min, ETA ~ 193.7 min
+[380/1800] leg fold=6 acc-AxAz seed=46: macroF1=0.752 loss=0.281 fit=7.9s | elapsed 51.4 min, ETA ~ 192.3 min
+[390/1800] leg fold=6 gyro-GxGz seed=44: macroF1=0.772 loss=0.221 fit=7.9s | elapsed 52.8 min, ETA ~ 190.8 min
+[400/1800] leg fold=6 single-Ax seed=46: macroF1=0.724 loss=0.373 fit=7.8s | elapsed 54.1 min, ETA ~ 189.3 min
+[410/1800] leg fold=6 single-Gx seed=44: macroF1=0.676 loss=0.488 fit=7.9s | elapsed 55.4 min, ETA ~ 187.8 min
+[420/1800] leg fold=6 single-Gz seed=46: macroF1=0.696 loss=0.271 fit=8.0s | elapsed 56.7 min, ETA ~ 186.4 min
+[430/1800] leg fold=7 gyro-3 seed=44: macroF1=0.788 loss=0.188 fit=7.8s | elapsed 58.1 min, ETA ~ 185.0 min
+[440/1800] leg fold=7 acc-AxAz seed=46: macroF1=0.772 loss=0.275 fit=7.8s | elapsed 59.4 min, ETA ~ 183.6 min
+[450/1800] leg fold=7 gyro-GxGz seed=44: macroF1=0.805 loss=0.217 fit=8.1s | elapsed 60.7 min, ETA ~ 182.2 min
+[460/1800] leg fold=7 single-Ax seed=46: macroF1=0.745 loss=0.371 fit=8.1s | elapsed 62.1 min, ETA ~ 180.8 min
+[470/1800] leg fold=7 single-Gx seed=44: macroF1=0.614 loss=0.463 fit=8.1s | elapsed 63.4 min, ETA ~ 179.4 min
+[480/1800] leg fold=7 single-Gz seed=46: macroF1=0.792 loss=0.293 fit=8.2s | elapsed 64.7 min, ETA ~ 178.0 min
+[490/1800] leg fold=8 gyro-3 seed=44: macroF1=0.761 loss=0.193 fit=8.1s | elapsed 66.1 min, ETA ~ 176.7 min
+[500/1800] leg fold=8 acc-AxAz seed=46: macroF1=0.684 loss=0.282 fit=7.9s | elapsed 67.5 min, ETA ~ 175.4 min
+[510/1800] leg fold=8 gyro-GxGz seed=44: macroF1=0.739 loss=0.211 fit=7.9s | elapsed 68.8 min, ETA ~ 174.0 min
+[520/1800] leg fold=8 single-Ax seed=46: macroF1=0.669 loss=0.363 fit=8.2s | elapsed 70.2 min, ETA ~ 172.7 min
+[530/1800] leg fold=8 single-Gx seed=44: macroF1=0.572 loss=0.456 fit=8.1s | elapsed 71.5 min, ETA ~ 171.4 min
+[540/1800] leg fold=8 single-Gz seed=46: macroF1=0.712 loss=0.276 fit=8.3s | elapsed 72.9 min, ETA ~ 170.1 min
+[550/1800] leg fold=9 gyro-3 seed=44: macroF1=0.799 loss=0.187 fit=8.1s | elapsed 74.3 min, ETA ~ 168.8 min
+[560/1800] leg fold=9 acc-AxAz seed=46: macroF1=0.729 loss=0.279 fit=8.2s | elapsed 75.7 min, ETA ~ 167.5 min
+[570/1800] leg fold=9 gyro-GxGz seed=44: macroF1=0.774 loss=0.221 fit=8.1s | elapsed 77.0 min, ETA ~ 166.2 min
+[580/1800] leg fold=9 single-Ax seed=46: macroF1=0.683 loss=0.370 fit=8.0s | elapsed 78.4 min, ETA ~ 164.9 min
+[590/1800] leg fold=9 single-Gx seed=44: macroF1=0.555 loss=0.468 fit=8.3s | elapsed 79.8 min, ETA ~ 163.6 min
+[600/1800] leg fold=9 single-Gz seed=46: macroF1=0.709 loss=0.279 fit=8.1s | elapsed 81.1 min, ETA ~ 162.3 min
+[610/1800] pocket fold=0 gyro-3 seed=44: macroF1=0.569 loss=0.317 fit=8.8s | elapsed 82.6 min, ETA ~ 161.2 min
+[620/1800] pocket fold=0 acc-AxAz seed=46: macroF1=0.487 loss=0.402 fit=8.7s | elapsed 84.1 min, ETA ~ 160.0 min
+[630/1800] pocket fold=0 gyro-GxGz seed=44: macroF1=0.546 loss=0.387 fit=9.0s | elapsed 85.5 min, ETA ~ 158.9 min
+[640/1800] pocket fold=0 single-Ax seed=46: macroF1=0.429 loss=0.615 fit=8.9s | elapsed 87.0 min, ETA ~ 157.7 min
+[650/1800] pocket fold=0 single-Gx seed=44: macroF1=0.363 loss=0.666 fit=8.7s | elapsed 88.5 min, ETA ~ 156.5 min
+[660/1800] pocket fold=0 single-Gz seed=46: macroF1=0.517 loss=0.526 fit=8.6s | elapsed 89.9 min, ETA ~ 155.3 min
+[670/1800] pocket fold=1 gyro-3 seed=44: macroF1=0.531 loss=0.322 fit=8.3s | elapsed 91.3 min, ETA ~ 154.0 min
+[680/1800] pocket fold=1 acc-AxAz seed=46: macroF1=0.623 loss=0.436 fit=8.4s | elapsed 92.8 min, ETA ~ 152.8 min
+[690/1800] pocket fold=1 gyro-GxGz seed=44: macroF1=0.558 loss=0.401 fit=8.6s | elapsed 94.2 min, ETA ~ 151.5 min
+[700/1800] pocket fold=1 single-Ax seed=46: macroF1=0.604 loss=0.666 fit=8.5s | elapsed 95.6 min, ETA ~ 150.2 min
+[710/1800] pocket fold=1 single-Gx seed=44: macroF1=0.533 loss=0.712 fit=8.4s | elapsed 97.0 min, ETA ~ 149.0 min
+[720/1800] pocket fold=1 single-Gz seed=46: macroF1=0.449 loss=0.557 fit=8.5s | elapsed 98.5 min, ETA ~ 147.7 min
+[730/1800] pocket fold=2 gyro-3 seed=44: macroF1=0.684 loss=0.322 fit=8.8s | elapsed 99.9 min, ETA ~ 146.5 min
+[740/1800] pocket fold=2 acc-AxAz seed=46: macroF1=0.558 loss=0.418 fit=8.8s | elapsed 101.4 min, ETA ~ 145.3 min
+[750/1800] pocket fold=2 gyro-GxGz seed=44: macroF1=0.693 loss=0.407 fit=8.8s | elapsed 102.9 min, ETA ~ 144.0 min
+[760/1800] pocket fold=2 single-Ax seed=46: macroF1=0.523 loss=0.641 fit=8.7s | elapsed 104.4 min, ETA ~ 142.8 min
+[770/1800] pocket fold=2 single-Gx seed=44: macroF1=0.433 loss=0.695 fit=8.8s | elapsed 105.8 min, ETA ~ 141.6 min
+[780/1800] pocket fold=2 single-Gz seed=46: macroF1=0.653 loss=0.571 fit=8.8s | elapsed 107.3 min, ETA ~ 140.3 min
+[790/1800] pocket fold=3 gyro-3 seed=44: macroF1=0.579 loss=0.318 fit=8.8s | elapsed 108.8 min, ETA ~ 139.1 min
+[800/1800] pocket fold=3 acc-AxAz seed=46: macroF1=0.600 loss=0.430 fit=9.2s | elapsed 110.3 min, ETA ~ 137.9 min
+[810/1800] pocket fold=3 gyro-GxGz seed=44: macroF1=0.496 loss=0.390 fit=8.8s | elapsed 111.8 min, ETA ~ 136.6 min
+[820/1800] pocket fold=3 single-Ax seed=46: macroF1=0.508 loss=0.626 fit=8.9s | elapsed 113.2 min, ETA ~ 135.3 min
+[830/1800] pocket fold=3 single-Gx seed=44: macroF1=0.434 loss=0.706 fit=9.0s | elapsed 114.7 min, ETA ~ 134.1 min
+[840/1800] pocket fold=3 single-Gz seed=46: macroF1=0.475 loss=0.515 fit=8.6s | elapsed 116.2 min, ETA ~ 132.8 min
+[850/1800] pocket fold=4 gyro-3 seed=44: macroF1=0.566 loss=0.292 fit=8.7s | elapsed 117.7 min, ETA ~ 131.5 min
+[860/1800] pocket fold=4 acc-AxAz seed=46: macroF1=0.565 loss=0.420 fit=8.6s | elapsed 119.1 min, ETA ~ 130.2 min
+[870/1800] pocket fold=4 gyro-GxGz seed=44: macroF1=0.503 loss=0.373 fit=8.8s | elapsed 120.6 min, ETA ~ 128.9 min
+[880/1800] pocket fold=4 single-Ax seed=46: macroF1=0.515 loss=0.627 fit=8.7s | elapsed 122.0 min, ETA ~ 127.6 min
+[890/1800] pocket fold=4 single-Gx seed=44: macroF1=0.444 loss=0.679 fit=8.6s | elapsed 123.5 min, ETA ~ 126.3 min
+[900/1800] pocket fold=4 single-Gz seed=46: macroF1=0.473 loss=0.516 fit=8.6s | elapsed 125.0 min, ETA ~ 125.0 min
+[910/1800] pocket fold=5 gyro-3 seed=44: macroF1=0.510 loss=0.299 fit=8.5s | elapsed 126.4 min, ETA ~ 123.6 min
+[920/1800] pocket fold=5 acc-AxAz seed=46: macroF1=0.574 loss=0.410 fit=8.6s | elapsed 127.8 min, ETA ~ 122.3 min
+[930/1800] pocket fold=5 gyro-GxGz seed=44: macroF1=0.481 loss=0.374 fit=8.6s | elapsed 129.3 min, ETA ~ 120.9 min
+[940/1800] pocket fold=5 single-Ax seed=46: macroF1=0.468 loss=0.613 fit=8.8s | elapsed 130.7 min, ETA ~ 119.6 min
+[950/1800] pocket fold=5 single-Gx seed=44: macroF1=0.389 loss=0.659 fit=8.4s | elapsed 132.1 min, ETA ~ 118.2 min
+[960/1800] pocket fold=5 single-Gz seed=46: macroF1=0.499 loss=0.513 fit=8.6s | elapsed 133.6 min, ETA ~ 116.9 min
+[970/1800] pocket fold=6 gyro-3 seed=44: macroF1=0.530 loss=0.321 fit=8.6s | elapsed 135.0 min, ETA ~ 115.5 min
+[980/1800] pocket fold=6 acc-AxAz seed=46: macroF1=0.610 loss=0.432 fit=8.6s | elapsed 136.5 min, ETA ~ 114.2 min
+[990/1800] pocket fold=6 gyro-GxGz seed=44: macroF1=0.493 loss=0.380 fit=8.5s | elapsed 137.9 min, ETA ~ 112.8 min
+[1000/1800] pocket fold=6 single-Ax seed=46: macroF1=0.515 loss=0.649 fit=8.7s | elapsed 139.4 min, ETA ~ 111.5 min
+[1010/1800] pocket fold=6 single-Gx seed=44: macroF1=0.395 loss=0.679 fit=8.8s | elapsed 140.9 min, ETA ~ 110.2 min
+[1020/1800] pocket fold=6 single-Gz seed=46: macroF1=0.450 loss=0.529 fit=8.7s | elapsed 142.3 min, ETA ~ 108.8 min
+[1030/1800] pocket fold=7 gyro-3 seed=44: macroF1=0.629 loss=0.318 fit=8.7s | elapsed 143.8 min, ETA ~ 107.5 min
+[1040/1800] pocket fold=7 acc-AxAz seed=46: macroF1=0.594 loss=0.430 fit=9.1s | elapsed 145.3 min, ETA ~ 106.2 min
+[1050/1800] pocket fold=7 gyro-GxGz seed=44: macroF1=0.565 loss=0.379 fit=8.6s | elapsed 146.8 min, ETA ~ 104.8 min
+[1060/1800] pocket fold=7 single-Ax seed=46: macroF1=0.548 loss=0.637 fit=8.7s | elapsed 148.2 min, ETA ~ 103.5 min
+[1070/1800] pocket fold=7 single-Gx seed=44: macroF1=0.516 loss=0.704 fit=8.8s | elapsed 149.7 min, ETA ~ 102.1 min
+[1080/1800] pocket fold=7 single-Gz seed=46: macroF1=0.563 loss=0.543 fit=8.7s | elapsed 151.2 min, ETA ~ 100.8 min
+[1090/1800] pocket fold=8 gyro-3 seed=44: macroF1=0.416 loss=0.308 fit=8.6s | elapsed 152.6 min, ETA ~ 99.4 min
+[1100/1800] pocket fold=8 acc-AxAz seed=46: macroF1=0.504 loss=0.418 fit=8.8s | elapsed 154.1 min, ETA ~ 98.0 min
+[1110/1800] pocket fold=8 gyro-GxGz seed=44: macroF1=0.327 loss=0.377 fit=8.6s | elapsed 155.5 min, ETA ~ 96.7 min
+[1120/1800] pocket fold=8 single-Ax seed=46: macroF1=0.467 loss=0.637 fit=8.8s | elapsed 157.0 min, ETA ~ 95.3 min
+[1130/1800] pocket fold=8 single-Gx seed=44: macroF1=0.383 loss=0.691 fit=8.7s | elapsed 158.5 min, ETA ~ 94.0 min
+[1140/1800] pocket fold=8 single-Gz seed=46: macroF1=0.404 loss=0.524 fit=8.7s | elapsed 159.9 min, ETA ~ 92.6 min
+[1150/1800] pocket fold=9 gyro-3 seed=44: macroF1=0.548 loss=0.314 fit=8.7s | elapsed 161.4 min, ETA ~ 91.2 min
+[1160/1800] pocket fold=9 acc-AxAz seed=46: macroF1=0.596 loss=0.418 fit=8.6s | elapsed 162.9 min, ETA ~ 89.8 min
+[1170/1800] pocket fold=9 gyro-GxGz seed=44: macroF1=0.565 loss=0.398 fit=8.5s | elapsed 164.3 min, ETA ~ 88.5 min
+[1180/1800] pocket fold=9 single-Ax seed=46: macroF1=0.518 loss=0.632 fit=8.8s | elapsed 165.8 min, ETA ~ 87.1 min
+[1190/1800] pocket fold=9 single-Gx seed=44: macroF1=0.378 loss=0.694 fit=8.7s | elapsed 167.2 min, ETA ~ 85.7 min
+[1200/1800] pocket fold=9 single-Gz seed=46: macroF1=0.535 loss=0.544 fit=8.7s | elapsed 168.7 min, ETA ~ 84.3 min
+[1210/1800] wrist fold=0 gyro-3 seed=44: macroF1=0.773 loss=0.162 fit=8.8s | elapsed 170.2 min, ETA ~ 83.0 min
+[1220/1800] wrist fold=0 acc-AxAz seed=46: macroF1=0.807 loss=0.130 fit=9.1s | elapsed 171.7 min, ETA ~ 81.6 min
+[1230/1800] wrist fold=0 gyro-GxGz seed=44: macroF1=0.743 loss=0.257 fit=9.1s | elapsed 173.2 min, ETA ~ 80.3 min
+[1240/1800] wrist fold=0 single-Ax seed=46: macroF1=0.625 loss=0.350 fit=8.8s | elapsed 174.7 min, ETA ~ 78.9 min
+[1250/1800] wrist fold=0 single-Gx seed=44: macroF1=0.594 loss=0.703 fit=8.9s | elapsed 176.2 min, ETA ~ 77.5 min
+[1260/1800] wrist fold=0 single-Gz seed=46: macroF1=0.676 loss=0.411 fit=8.7s | elapsed 177.7 min, ETA ~ 76.1 min
+[1270/1800] wrist fold=1 gyro-3 seed=44: macroF1=0.840 loss=0.193 fit=8.5s | elapsed 179.1 min, ETA ~ 74.7 min
+[1280/1800] wrist fold=1 acc-AxAz seed=46: macroF1=0.858 loss=0.140 fit=8.6s | elapsed 180.5 min, ETA ~ 73.3 min
+[1290/1800] wrist fold=1 gyro-GxGz seed=44: macroF1=0.780 loss=0.275 fit=8.5s | elapsed 182.0 min, ETA ~ 71.9 min
+[1300/1800] wrist fold=1 single-Ax seed=46: macroF1=0.695 loss=0.370 fit=8.5s | elapsed 183.4 min, ETA ~ 70.5 min
+[1310/1800] wrist fold=1 single-Gx seed=44: macroF1=0.519 loss=0.694 fit=8.7s | elapsed 184.8 min, ETA ~ 69.1 min
+[1320/1800] wrist fold=1 single-Gz seed=46: macroF1=0.726 loss=0.419 fit=8.6s | elapsed 186.3 min, ETA ~ 67.7 min
+[1330/1800] wrist fold=2 gyro-3 seed=44: macroF1=0.881 loss=0.181 fit=8.8s | elapsed 187.7 min, ETA ~ 66.3 min
+[1340/1800] wrist fold=2 acc-AxAz seed=46: macroF1=0.882 loss=0.141 fit=8.7s | elapsed 189.2 min, ETA ~ 65.0 min
+[1350/1800] wrist fold=2 gyro-GxGz seed=44: macroF1=0.825 loss=0.273 fit=8.8s | elapsed 190.7 min, ETA ~ 63.6 min
+[1360/1800] wrist fold=2 single-Ax seed=46: macroF1=0.670 loss=0.352 fit=8.8s | elapsed 192.1 min, ETA ~ 62.2 min
+[1370/1800] wrist fold=2 single-Gx seed=44: macroF1=0.570 loss=0.709 fit=8.8s | elapsed 193.6 min, ETA ~ 60.8 min
+[1380/1800] wrist fold=2 single-Gz seed=46: macroF1=0.710 loss=0.421 fit=8.7s | elapsed 195.1 min, ETA ~ 59.4 min
+[1390/1800] wrist fold=3 gyro-3 seed=44: macroF1=0.789 loss=0.198 fit=8.7s | elapsed 196.6 min, ETA ~ 58.0 min
+[1400/1800] wrist fold=3 acc-AxAz seed=46: macroF1=0.790 loss=0.137 fit=8.9s | elapsed 198.1 min, ETA ~ 56.6 min
+[1410/1800] wrist fold=3 gyro-GxGz seed=44: macroF1=0.792 loss=0.283 fit=8.7s | elapsed 199.6 min, ETA ~ 55.2 min
+[1420/1800] wrist fold=3 single-Ax seed=46: macroF1=0.623 loss=0.350 fit=8.8s | elapsed 201.0 min, ETA ~ 53.8 min
+[1430/1800] wrist fold=3 single-Gx seed=44: macroF1=0.532 loss=0.696 fit=8.7s | elapsed 202.5 min, ETA ~ 52.4 min
+[1440/1800] wrist fold=3 single-Gz seed=46: macroF1=0.708 loss=0.418 fit=8.8s | elapsed 204.0 min, ETA ~ 51.0 min
+[1450/1800] wrist fold=4 gyro-3 seed=44: macroF1=0.837 loss=0.191 fit=8.8s | elapsed 205.5 min, ETA ~ 49.6 min
+[1460/1800] wrist fold=4 acc-AxAz seed=46: macroF1=0.858 loss=0.138 fit=9.1s | elapsed 207.0 min, ETA ~ 48.2 min
+[1470/1800] wrist fold=4 gyro-GxGz seed=44: macroF1=0.755 loss=0.270 fit=9.0s | elapsed 208.5 min, ETA ~ 46.8 min
+[1480/1800] wrist fold=4 single-Ax seed=46: macroF1=0.678 loss=0.354 fit=9.0s | elapsed 210.0 min, ETA ~ 45.4 min
+[1490/1800] wrist fold=4 single-Gx seed=44: macroF1=0.613 loss=0.708 fit=8.8s | elapsed 211.5 min, ETA ~ 44.0 min
+[1500/1800] wrist fold=4 single-Gz seed=46: macroF1=0.650 loss=0.402 fit=8.8s | elapsed 213.0 min, ETA ~ 42.6 min
+[1510/1800] wrist fold=5 gyro-3 seed=44: macroF1=0.765 loss=0.188 fit=8.8s | elapsed 214.5 min, ETA ~ 41.2 min
+[1520/1800] wrist fold=5 acc-AxAz seed=46: macroF1=0.799 loss=0.125 fit=8.7s | elapsed 215.9 min, ETA ~ 39.8 min
+[1530/1800] wrist fold=5 gyro-GxGz seed=44: macroF1=0.764 loss=0.275 fit=8.8s | elapsed 217.4 min, ETA ~ 38.4 min
+[1540/1800] wrist fold=5 single-Ax seed=46: macroF1=0.629 loss=0.367 fit=8.8s | elapsed 218.9 min, ETA ~ 37.0 min
+[1550/1800] wrist fold=5 single-Gx seed=44: macroF1=0.472 loss=0.671 fit=8.7s | elapsed 220.4 min, ETA ~ 35.5 min
+[1560/1800] wrist fold=5 single-Gz seed=46: macroF1=0.688 loss=0.412 fit=8.8s | elapsed 221.9 min, ETA ~ 34.1 min
+[1570/1800] wrist fold=6 gyro-3 seed=44: macroF1=0.872 loss=0.181 fit=8.9s | elapsed 223.3 min, ETA ~ 32.7 min
+[1580/1800] wrist fold=6 acc-AxAz seed=46: macroF1=0.817 loss=0.141 fit=8.9s | elapsed 224.8 min, ETA ~ 31.3 min
+[1590/1800] wrist fold=6 gyro-GxGz seed=44: macroF1=0.818 loss=0.290 fit=8.7s | elapsed 226.3 min, ETA ~ 29.9 min
+[1600/1800] wrist fold=6 single-Ax seed=46: macroF1=0.662 loss=0.362 fit=9.6s | elapsed 227.8 min, ETA ~ 28.5 min
+[1610/1800] wrist fold=6 single-Gx seed=44: macroF1=0.590 loss=0.702 fit=9.9s | elapsed 229.4 min, ETA ~ 27.1 min
+[1620/1800] wrist fold=6 single-Gz seed=46: macroF1=0.721 loss=0.419 fit=9.9s | elapsed 231.1 min, ETA ~ 25.7 min
+[1630/1800] wrist fold=7 gyro-3 seed=44: macroF1=0.863 loss=0.183 fit=9.8s | elapsed 232.7 min, ETA ~ 24.3 min
+[1640/1800] wrist fold=7 acc-AxAz seed=46: macroF1=0.855 loss=0.145 fit=9.9s | elapsed 234.3 min, ETA ~ 22.9 min
+[1650/1800] wrist fold=7 gyro-GxGz seed=44: macroF1=0.833 loss=0.277 fit=9.7s | elapsed 236.0 min, ETA ~ 21.5 min
+[1660/1800] wrist fold=7 single-Ax seed=46: macroF1=0.722 loss=0.365 fit=9.6s | elapsed 237.6 min, ETA ~ 20.0 min
+[1670/1800] wrist fold=7 single-Gx seed=44: macroF1=0.639 loss=0.715 fit=9.7s | elapsed 239.2 min, ETA ~ 18.6 min
+[1680/1800] wrist fold=7 single-Gz seed=46: macroF1=0.747 loss=0.423 fit=9.6s | elapsed 240.8 min, ETA ~ 17.2 min
+[1690/1800] wrist fold=8 gyro-3 seed=44: macroF1=0.844 loss=0.170 fit=9.7s | elapsed 242.5 min, ETA ~ 15.8 min
+[1700/1800] wrist fold=8 acc-AxAz seed=46: macroF1=0.894 loss=0.138 fit=9.7s | elapsed 244.1 min, ETA ~ 14.4 min
+[1710/1800] wrist fold=8 gyro-GxGz seed=44: macroF1=0.788 loss=0.261 fit=9.8s | elapsed 245.7 min, ETA ~ 12.9 min
+[1720/1800] wrist fold=8 single-Ax seed=46: macroF1=0.792 loss=0.377 fit=9.7s | elapsed 247.4 min, ETA ~ 11.5 min
+[1730/1800] wrist fold=8 single-Gx seed=44: macroF1=0.600 loss=0.696 fit=9.7s | elapsed 249.0 min, ETA ~ 10.1 min
+[1740/1800] wrist fold=8 single-Gz seed=46: macroF1=0.800 loss=0.426 fit=9.7s | elapsed 250.6 min, ETA ~ 8.6 min
+[1750/1800] wrist fold=9 gyro-3 seed=44: macroF1=0.753 loss=0.178 fit=9.6s | elapsed 252.2 min, ETA ~ 7.2 min
+[1760/1800] wrist fold=9 acc-AxAz seed=46: macroF1=0.834 loss=0.141 fit=9.8s | elapsed 253.8 min, ETA ~ 5.8 min
+[1770/1800] wrist fold=9 gyro-GxGz seed=44: macroF1=0.737 loss=0.268 fit=9.5s | elapsed 255.4 min, ETA ~ 4.3 min
+[1780/1800] wrist fold=9 single-Ax seed=46: macroF1=0.727 loss=0.365 fit=9.7s | elapsed 257.1 min, ETA ~ 2.9 min
+[1790/1800] wrist fold=9 single-Gx seed=44: macroF1=0.514 loss=0.691 fit=9.7s | elapsed 258.7 min, ETA ~ 1.4 min
+[1800/1800] wrist fold=9 single-Gz seed=46: macroF1=0.634 loss=0.412 fit=9.6s | elapsed 260.3 min, ETA ~ 0.0 min
+Loop finished. New units this session: 1800 | total done: 1800 of 1800
+Rows in results.csv: 1800 | expected for this grid: 1800
+Classical comparison skipped (smoke run, or results/raw/classical/full/summary_by_position_model_config.csv not found).

@@ -1,0 +1,7 @@
+seed,n_models_for_seed,pairs_meeting_margin_in_all_models,n_pairs,any_pair_near_boundary
+42,4,leg:gyro-3,1,True
+43,4,(none),0,False
+44,4,leg:gyro-3,1,True
+45,1,leg:gyro-3,1,False
+46,1,leg:gyro-3,1,False
+mean,4,leg:gyro-3,1,True

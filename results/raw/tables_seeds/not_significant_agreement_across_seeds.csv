@@ -1,0 +1,12 @@
+model,position,config,seeds_not_significant
+CNN,leg,gyro-3,"43,mean"
+CNN,leg,gyro-GxGz,43
+CNN,leg,gyro-GyGz,43
+CNN,pocket,acc-3,"42,44,mean"
+RF,leg,gyro-3,42
+RF,pocket,acc-3,"42,43,44,mean"
+RF,pocket,acc-AxAy,"42,43,44,mean"
+RF,pocket,acc-AxAz,"42,43,44,mean"
+RF,pocket,acc-AyAz,"42,43,44,mean"
+RF,pocket,single-Ax,"42,44,mean"
+RF,pocket,single-Ay,"42,44,mean"

@@ -1,0 +1,72 @@
+SMOKE_TEST = False | device: cuda | results dir: results/raw/cnn_full
+GPU: Tesla T4
+SHA-256: 2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9
+Hash matches the audited file.
+Loaded: (4703320, 11) ['Subject', 'Position', 'Session', 'A_x', 'A_y', 'A_z', 'G_x', 'G_y', 'G_z', 'C_1', 'Workout']
+Roles: {'subject': 'Subject', 'label': 'Workout', 'position': 'Position', 'session': 'Session'} | channels: {'Ax': 'A_x', 'Ay': 'A_y', 'Az': 'A_z', 'Gx': 'G_x', 'Gy': 'G_y', 'Gz': 'G_z'}
+Subjects: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+Positions: ['leg', 'pocket', 'wrist']
+Labels: ['Adductor', 'ArmCurl', 'BenchPress', 'LegCurl', 'LegPress', 'Null', 'Riding', 'RopeSkipping', 'Running', 'Squat', 'StairClimber', 'Walking'] | null ids: [5]
+Sessions: ['1', '2', '3', '4', '5']
+Runs: 9589 | window = 80 samples, step = 40
+Windows: 105728 | window-start hash: d12f06d035e12591 ...
+VERIFIED: windows are identical to notebook 01's.
+leg: windows=33272, tensor=(33272, 6, 80)
+pocket: windows=35935, tensor=(35935, 6, 80)
+wrist: windows=36521, tensor=(36521, 6, 80)
+Configs: ['6-axis', 'acc-3', 'gyro-3', 'acc-AxAy', 'acc-AxAz', 'acc-AyAz', 'gyro-GxGy', 'gyro-GxGz', 'gyro-GyGz', 'single-Ax', 'single-Ay', 'single-Az', 'single-Gx', 'single-Gy', 'single-Gz'] | folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | positions: ['leg', 'pocket', 'wrist'] | seeds: [42]
+Model (6 channels): 37772 parameters, 979456 MACs/window, 155 KB
+   1 channel(s): 36972 parameters, 915456 MACs/window
+   2 channel(s): 37132 parameters, 928256 MACs/window
+   3 channel(s): 37292 parameters, 941056 MACs/window
+Units already completed: 0
+Check 1 passed: normalisation statistics come from training subjects only.
+Check 2: label-shuffle control on leg fold 0: macro-F1 = 0.033 (chance ~ 0.083) in 2.2s
+[1/450] leg fold=0 6-axis seed=42: macroF1=0.747 loss=0.177 fit=8.8s | elapsed 0.1 min, ETA ~ 66.7 min
+[10/450] leg fold=0 single-Ax seed=42: macroF1=0.616 loss=0.346 fit=8.5s | elapsed 1.5 min, ETA ~ 65.5 min
+[20/450] leg fold=1 acc-AxAz seed=42: macroF1=0.747 loss=0.288 fit=8.6s | elapsed 2.9 min, ETA ~ 63.3 min
+[30/450] leg fold=1 single-Gz seed=42: macroF1=0.751 loss=0.294 fit=8.4s | elapsed 4.3 min, ETA ~ 60.7 min
+[40/450] leg fold=2 single-Ax seed=42: macroF1=0.705 loss=0.377 fit=8.5s | elapsed 5.8 min, ETA ~ 59.5 min
+[50/450] leg fold=3 acc-AxAz seed=42: macroF1=0.755 loss=0.291 fit=8.7s | elapsed 7.3 min, ETA ~ 58.3 min
+[60/450] leg fold=3 single-Gz seed=42: macroF1=0.696 loss=0.267 fit=8.9s | elapsed 8.8 min, ETA ~ 57.2 min
+[70/450] leg fold=4 single-Ax seed=42: macroF1=0.732 loss=0.365 fit=8.5s | elapsed 10.3 min, ETA ~ 55.7 min
+[80/450] leg fold=5 acc-AxAz seed=42: macroF1=0.696 loss=0.284 fit=9.0s | elapsed 11.7 min, ETA ~ 54.3 min
+[90/450] leg fold=5 single-Gz seed=42: macroF1=0.707 loss=0.271 fit=9.0s | elapsed 13.2 min, ETA ~ 53.0 min
+[100/450] leg fold=6 single-Ax seed=42: macroF1=0.713 loss=0.377 fit=8.6s | elapsed 14.7 min, ETA ~ 51.4 min
+[110/450] leg fold=7 acc-AxAz seed=42: macroF1=0.772 loss=0.269 fit=8.6s | elapsed 16.2 min, ETA ~ 50.0 min
+[120/450] leg fold=7 single-Gz seed=42: macroF1=0.814 loss=0.288 fit=8.7s | elapsed 17.6 min, ETA ~ 48.5 min
+[130/450] leg fold=8 single-Ax seed=42: macroF1=0.671 loss=0.360 fit=8.8s | elapsed 19.1 min, ETA ~ 47.0 min
+[140/450] leg fold=9 acc-AxAz seed=42: macroF1=0.725 loss=0.267 fit=8.7s | elapsed 20.6 min, ETA ~ 45.5 min
+[150/450] leg fold=9 single-Gz seed=42: macroF1=0.738 loss=0.271 fit=8.5s | elapsed 22.0 min, ETA ~ 44.1 min
+[160/450] pocket fold=0 single-Ax seed=42: macroF1=0.431 loss=0.628 fit=9.5s | elapsed 23.6 min, ETA ~ 42.9 min
+[170/450] pocket fold=1 acc-AxAz seed=42: macroF1=0.603 loss=0.433 fit=9.2s | elapsed 25.2 min, ETA ~ 41.5 min
+[180/450] pocket fold=1 single-Gz seed=42: macroF1=0.465 loss=0.533 fit=9.0s | elapsed 26.8 min, ETA ~ 40.1 min
+[190/450] pocket fold=2 single-Ax seed=42: macroF1=0.549 loss=0.658 fit=9.1s | elapsed 28.3 min, ETA ~ 38.7 min
+[200/450] pocket fold=3 acc-AxAz seed=42: macroF1=0.595 loss=0.421 fit=9.7s | elapsed 29.9 min, ETA ~ 37.4 min
+[210/450] pocket fold=3 single-Gz seed=42: macroF1=0.479 loss=0.534 fit=9.4s | elapsed 31.5 min, ETA ~ 35.9 min
+[220/450] pocket fold=4 single-Ax seed=42: macroF1=0.517 loss=0.635 fit=9.7s | elapsed 33.0 min, ETA ~ 34.5 min
+[230/450] pocket fold=5 acc-AxAz seed=42: macroF1=0.566 loss=0.419 fit=9.2s | elapsed 34.6 min, ETA ~ 33.1 min
+[240/450] pocket fold=5 single-Gz seed=42: macroF1=0.470 loss=0.526 fit=9.0s | elapsed 36.1 min, ETA ~ 31.6 min
+[250/450] pocket fold=6 single-Ax seed=42: macroF1=0.527 loss=0.646 fit=9.2s | elapsed 37.6 min, ETA ~ 30.1 min
+[260/450] pocket fold=7 acc-AxAz seed=42: macroF1=0.615 loss=0.438 fit=9.2s | elapsed 39.2 min, ETA ~ 28.6 min
+[270/450] pocket fold=7 single-Gz seed=42: macroF1=0.557 loss=0.534 fit=9.2s | elapsed 40.7 min, ETA ~ 27.2 min
+[280/450] pocket fold=8 single-Ax seed=42: macroF1=0.471 loss=0.638 fit=9.4s | elapsed 42.3 min, ETA ~ 25.7 min
+[290/450] pocket fold=9 acc-AxAz seed=42: macroF1=0.592 loss=0.405 fit=9.4s | elapsed 43.9 min, ETA ~ 24.2 min
+[300/450] pocket fold=9 single-Gz seed=42: macroF1=0.539 loss=0.546 fit=9.1s | elapsed 45.4 min, ETA ~ 22.7 min
+[310/450] wrist fold=0 single-Ax seed=42: macroF1=0.623 loss=0.343 fit=9.5s | elapsed 47.0 min, ETA ~ 21.2 min
+[320/450] wrist fold=1 acc-AxAz seed=42: macroF1=0.854 loss=0.146 fit=9.4s | elapsed 48.5 min, ETA ~ 19.7 min
+[330/450] wrist fold=1 single-Gz seed=42: macroF1=0.723 loss=0.417 fit=9.3s | elapsed 50.0 min, ETA ~ 18.2 min
+[340/450] wrist fold=2 single-Ax seed=42: macroF1=0.667 loss=0.352 fit=9.2s | elapsed 51.6 min, ETA ~ 16.7 min
+[350/450] wrist fold=3 acc-AxAz seed=42: macroF1=0.792 loss=0.137 fit=9.3s | elapsed 53.3 min, ETA ~ 15.2 min
+[360/450] wrist fold=3 single-Gz seed=42: macroF1=0.706 loss=0.409 fit=9.1s | elapsed 54.8 min, ETA ~ 13.7 min
+[370/450] wrist fold=4 single-Ax seed=42: macroF1=0.685 loss=0.355 fit=9.5s | elapsed 56.4 min, ETA ~ 12.2 min
+[380/450] wrist fold=5 acc-AxAz seed=42: macroF1=0.811 loss=0.130 fit=9.3s | elapsed 57.9 min, ETA ~ 10.7 min
+[390/450] wrist fold=5 single-Gz seed=42: macroF1=0.686 loss=0.417 fit=9.0s | elapsed 59.5 min, ETA ~ 9.2 min
+[400/450] wrist fold=6 single-Ax seed=42: macroF1=0.665 loss=0.374 fit=9.2s | elapsed 61.0 min, ETA ~ 7.6 min
+[410/450] wrist fold=7 acc-AxAz seed=42: macroF1=0.864 loss=0.145 fit=10.0s | elapsed 62.6 min, ETA ~ 6.1 min
+[420/450] wrist fold=7 single-Gz seed=42: macroF1=0.751 loss=0.420 fit=9.3s | elapsed 64.2 min, ETA ~ 4.6 min
+[430/450] wrist fold=8 single-Ax seed=42: macroF1=0.788 loss=0.370 fit=9.3s | elapsed 65.8 min, ETA ~ 3.1 min
+[440/450] wrist fold=9 acc-AxAz seed=42: macroF1=0.842 loss=0.140 fit=9.5s | elapsed 67.4 min, ETA ~ 1.5 min
+[450/450] wrist fold=9 single-Gz seed=42: macroF1=0.650 loss=0.416 fit=10.0s | elapsed 69.0 min, ETA ~ 0.0 min
+Loop finished. New units this session: 450 | total done: 450 of 450
+Rows in results.csv: 450 | expected for this grid: 450

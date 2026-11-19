@@ -1,0 +1,12 @@
+kind,config,n_cells_on_front_of_12
+mixed-pair,mix-AxGz,9
+single-gyro,single-Gz,8
+drop-one,drop-Gx,5
+full,6-axis,5
+drop-one,drop-Az,4
+single-acc,single-Ax,4
+pure-triple,gyro-3,4
+pure-triple,acc-3,3
+mixed-pair,mix-AzGz,3
+drop-one,drop-Ay,2
+drop-one,drop-Gy,1

@@ -1,0 +1,8 @@
+{
+  "n_folds": 10,
+  "n_positions": 3,
+  "n_configs": 15,
+  "n_models": 4,
+  "total_model_fits_primary_grid": 1800,
+  "note": "Nested subject-wise hyper-parameter search (if used) multiplies this further; plan the budget before running."
+}

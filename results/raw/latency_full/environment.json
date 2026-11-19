@@ -1,0 +1,65 @@
+{
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "cpu": {
+    "cpu_model": "Intel(R) Xeon(R) CPU @ 2.00GHz",
+    "cpu_mhz": 2000.142,
+    "governor": "n/a",
+    "logical_cpus": 4,
+    "usable_cpus": 4
+  },
+  "machine_id": "6eac3c09da2a",
+  "session_id": "20261113T123744Z",
+  "gpu_visible": true,
+  "torch_device": "cuda",
+  "gpu": "Tesla T4",
+  "xgb_train_device": "cuda",
+  "cnn_weights": "trained",
+  "timing_threads": 1,
+  "timing_note": "single window, batch 1, 1 CPU thread; preparation + inference; shared cloud CPU; NOT edge-device latency; no energy measured",
+  "lat_fold": 0,
+  "n_time_windows": 300,
+  "n_passes": 3,
+  "n_warmup": 30,
+  "smoke_test": false,
+  "models": [
+    "XGB",
+    "CNN",
+    "RF",
+    "SVM"
+  ],
+  "positions": [
+    "leg",
+    "pocket",
+    "wrist"
+  ],
+  "config_groups": [
+    "P",
+    "A1",
+    "A2"
+  ],
+  "n_configs": 30,
+  "packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "xgboost": "3.4.1",
+    "torch": "2.11.0+cu130",
+    "threadpoolctl": "3.7.0",
+    "joblib": "1.6.0",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.0",
+    "pyarrow": "23.0.1"
+  },
+  "data_sha256": "2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9",
+  "windows_sha256": "d12f06d035e1259148d0eff38258a2df1aed571fcc6d31e33592386ff5c290d6",
+  "config_hash": "1df562cd7e0c301992060814c69dad56a5fd7a158091568828be23d0001ea4ce",
+  "stopped_early": false,
+  "accuracy_grids_used": {
+    "classical_full": "/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_full",
+    "cnn_full": "/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_full",
+    "extended_full": "/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/extended_full"
+  },
+  "timestamp_utc": "2026-11-13T14:24:04.741244+00:00",
+  "notebook_minutes": 107.1
+}

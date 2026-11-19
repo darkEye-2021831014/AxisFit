@@ -1,0 +1,20 @@
+{
+  "note": "Frozen before any extra-seed run. Statistics are computed in notebook 04c_seed_analysis, not here.",
+  "work_package": "WP-B (classical seeds)",
+  "seeds": {
+    "42": "results/raw/classical_full (notebook 01, immutable)",
+    "44": "results/raw/classical_seed44"
+  },
+  "descriptive": "per (model, position, configuration): mean macro-F1 over 10 held-out subjects per seed, then mean, SD (ddof=1), min, max, range across seeds",
+  "primary_family_unchanged": "14 reduced configurations vs 6-axis per position and model, Holm within family; seed-42 p-values stay the primary ones",
+  "claims_rechecked_per_seed": [
+    "160 of 168 reductions are Holm-significant decreases",
+    "only calf gyro-3 meets the 0.05 non-inferiority margin in all four models"
+  ],
+  "only_difference_from_notebook_01": "random_state of RF, SVM, XGB and the SVM training sub-sample (seed + fold)",
+  "not_recorded": [
+    "per-window latency (WP-D)",
+    "confusion table"
+  ],
+  "energy": "no energy claim; channel count sets data to sample, send, store and process"
+}

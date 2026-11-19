@@ -1,0 +1,17 @@
+{
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "gpu_visible": false,
+  "seed": 42,
+  "smoke_test": false,
+  "packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "xgboost": "3.4.1",
+    "joblib": "1.6.0"
+  },
+  "data_sha256": "2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9",
+  "config_hash": "7d8a6850660e83afca1a9d829d54ef68fa70eca5c80b198e089258db63d6c973",
+  "timestamp_utc": "2026-10-22T12:04:39.643835+00:00"
+}

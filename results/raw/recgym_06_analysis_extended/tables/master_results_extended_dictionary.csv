@@ -1,0 +1,39 @@
+column,description
+position,"wrist, leg (calf) or pocket"
+model,"RF, SVM, XGB or CNN"
+config,axis configuration name
+group,"P primary grid, A1 drop-one, A2 mixed pairs"
+kind,structural type of the configuration
+family,"statistical family: primary14, E1_drop_one or E2_mixed_pairs (Holm within position x model)"
+axis_channels,device-frame channels retained
+n_channels,number of channels
+data_rate_hz,channels x 20 Hz
+macro_f1_mean,"mean over 10 held-out subjects, seed 42, 12 labels incl. Null"
+macro_f1_sd,SD over the 10 subjects
+macro_f1_median,median over subjects
+macro_f1_min,minimum over subjects
+macro_f1_max,maximum over subjects
+accuracy_mean,mean accuracy
+weighted_f1_mean,mean weighted F1
+macro_f1_workouts_mean,mean macro-F1 over the 11 workouts (Null excluded)
+mean_diff,mean paired difference vs the 6-axis result of the same subjects (negative = loss)
+ci_lo,lower bound of the percentile bootstrap 95 % CI over subjects
+ci_hi,upper bound
+dz,Cohen dz of the paired differences
+rbc,rank-biserial correlation
+n_pos,subjects with a higher score than 6-axis
+n_neg,subjects with a lower score than 6-axis
+p,two-sided Wilcoxon signed-rank p (unadjusted)
+p_holm_family,Holm-adjusted p within the position x model family
+ni_0p05,True if the CI lower bound exceeds -0.05 (descriptive margin)
+sig_decrease,Holm-significant decrease vs 6-axis
+retained_pct,100 x mean macro-F1 / 6-axis mean macro-F1 of the same position and model
+n_seeds,number of training seeds behind this cell (1 for the extended configurations)
+mean_over_seeds,mean over seeds of the 10-subject mean macro-F1 (primary configurations only)
+sd_over_seeds,SD over seeds of the 10-subject mean macro-F1 (primary configurations only)
+total_median_ms,"median single-window latency, preparation plus inference, one machine, one fold (notebook 05)"
+prep_median_ms,"median preparation time (slice, features or z-score)"
+infer_median_ms,median inference time
+size_kb,serialised model size in kB (notebook 05)
+complexity_count,"CNN parameters, or trees / support vectors for classical models"
+duty_cycle_pct,latency as a share of the 2 s window hop on one core of that CPU; not an energy figure

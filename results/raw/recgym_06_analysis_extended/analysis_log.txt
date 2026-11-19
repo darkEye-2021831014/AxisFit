@@ -1,0 +1,148 @@
+Versions: python 3.13.16 | numpy 2.1.3 | pandas 2.3.3 | scipy 1.16.3 | matplotlib 3.10.0
+Output folder: /kaggle/working/06_analysis_extended
+Unpacked zips: 0
+note: 2 copies of classical_full/results.csv - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_full/results.csv
+note: 2 copies of cnn_full/results.csv - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_full/results.csv
+note: 2 copies of extended_full/results.csv - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/extended_full/results.csv
+note: 2 copies of classical_seed43/results.csv - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed43/results.csv
+note: 2 copies of classical_seed44/results.csv - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed44/results.csv
+note: 2 copies of cnn_seeds43-46_full/results.csv - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_seeds43-46_full/results.csv
+input: classical_full/results.csv -> /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_full/results.csv
+input: cnn_full/results.csv -> /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_full/results.csv
+input: extended_full/results.csv -> /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/extended_full/results.csv
+input: classical_seed43/results.csv -> /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed43/results.csv
+input: classical_seed44/results.csv -> /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed44/results.csv
+input: cnn_seeds43-46_full/results.csv -> /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_seeds43-46_full/results.csv
+input: latency_full/results.csv -> /kaggle/input/datasets/chaoseye/datammm/NewExtension/NewExtension/recgym_05_latency_full/latency_full/results.csv
+Unified seed-42 grid: (3600, 26) | subjects: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+PASS unit count: classical primary | 1350 rows, expected 1350
+PASS unit count: CNN primary (seed 42) | 450 rows, expected 450
+PASS unit count: extended (A1+A2, 4 models) | 1800 rows, expected 1800
+PASS unit count: classical seed 43 | 1350 rows, expected 1350
+PASS unit count: classical seed 44 | 1350 rows, expected 1350
+PASS unit count: CNN seeds 43-46 | 1800 rows, expected 1800
+PASS unit count: latency (30 configs x 3 pos x 4 models) | 360 rows, expected 360
+PASS no duplicate units: classical primary
+PASS no duplicate units: CNN primary
+PASS no duplicate units: extended
+PASS no duplicate units: classical seed 43
+PASS no duplicate units: classical seed 44
+PASS no duplicate units: CNN seeds 43-46
+PASS unified grid has no duplicate (position, model, config, subject)
+PASS 10 LOSO subjects in every file
+PASS every (position, model, config) cell has 10 subjects
+PASS fold -> held-out subject mapping identical to primary: extended
+PASS fold -> held-out subject mapping identical to primary: classical seed 43
+PASS fold -> held-out subject mapping identical to primary: classical seed 44
+PASS fold -> held-out subject mapping identical to primary: CNN seeds 43-46
+PASS test-window counts equal the primary grid: extended
+PASS test-window counts equal the primary grid: classical seed 43
+PASS test-window counts equal the primary grid: CNN seeds 43-46
+PASS channel strings agree with configuration names
+PASS classical n_features = 15 x n_channels (no cross-channel features)
+PASS n_channels column agrees with configuration name
+PASS macro-F1 values lie in [0, 1]
+PASS group labels: P for primary, A1 for drop-one, A2 for mixed pairs
+note: 2 copies of classical_full/environment.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_full/environment.json
+note: 2 copies of cnn_full/environment.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_full/environment.json
+note: 2 copies of extended_full/environment.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/extended_full/environment.json
+note: 2 copies of classical_seed43/environment.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed43/environment.json
+note: 2 copies of classical_seed44/environment.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed44/environment.json
+note: 2 copies of cnn_seeds43-46_full/environment.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_seeds43-46_full/environment.json
+PASS RecGym.csv SHA-256 recorded in the runs equals the frozen hash (where recorded) | 7 of 7 runs record it: ['classical_full', 'classical_seed43', 'classical_seed44', 'cnn_full', 'cnn_seeds43-46_full', 'extended_full', 'latency_full']
+note: 2 copies of extended_full/anchor_check.csv - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/extended_full/anchor_check.csv
+note: 2 copies of classical_seed43/anchor_check.csv - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed43/anchor_check.csv
+note: 2 copies of classical_seed44/anchor_check.csv - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed44/anchor_check.csv
+saved table: anchor_checks.csv (10, 12)
+WARN anchor within tolerance: extended_full XGB leg fold 0 6-axis | |diff| = 0.0034 (tolerance 0.001); non-blocking, see seed SD in block 9
+note: 2 copies of cnn_full/sanity_checks.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_full/sanity_checks.json
+note: 2 copies of extended_full/sanity_checks.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/extended_full/sanity_checks.json
+note: 2 copies of classical_seed43/sanity_checks.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed43/sanity_checks.json
+note: 2 copies of classical_seed44/sanity_checks.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed44/sanity_checks.json
+note: 2 copies of cnn_seeds43-46_full/sanity_checks.json - using /kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_seeds43-46_full/sanity_checks.json
+saved table: label_shuffle_controls.csv (10, 5)
+PASS label-shuffle controls stay below the run thresholds
+Smallest possible exact two-sided Wilcoxon p with n = 10 pairs: 0.00195
+PASS subject x unit matrix complete (macro_f1) | (360, 10)
+PASS subject x unit matrix complete (macro_f1_workouts) | (360, 10)
+helpers ready
+saved table: A_primary_reduction_vs_6axis.csv (336, 30)
+Primary grid (seed 42): 160 of 168 reduced-vs-6-axis comparisons are Holm-significant decreases
+PASS primary grid has 168 comparisons (14 configs x 3 positions x 4 models) | 168
+PASS every primary cell found in master_results.csv
+PASS reproduces master_results.csv: cell means | max |diff| = 4.99e-07
+PASS reproduces master_results.csv: paired differences vs 6-axis | max |diff| = 4.99e-07
+PASS reproduces master_results.csv: Holm-adjusted p | max |diff| = 3.75e-07
+PASS reproduces master_results.csv: bootstrap CI bounds | max |diff| = 4.99e-07
+PASS Holm-significant decrease count equals master_results.csv | recomputed 160, master 160
+saved table: E1_drop_one_vs_6axis.csv (144, 30)
+saved table: E2_mixed_pairs_vs_6axis.csv (216, 30)
+saved table: E_summary_by_cell.csv (24, 8)
+saved table: E_null_concordance.csv (2, 6)
+saved table: E1_drop_one_cost_by_axis.csv (72, 13)
+wrist: most damaging single axis to remove (modal over models) = Ax (4 of 4 models agree)
+leg: most damaging single axis to remove (modal over models) = Gz (4 of 4 models agree)
+pocket: most damaging single axis to remove (modal over models) = Ax (4 of 4 models agree)
+saved table: BMW_best_median_worst_by_channel_count.csv (60, 16)
+saved table: SEL_loso_selection_optimism.csv (48, 16)
+saved table: MP_mixed_vs_pure_pairs.csv (72, 19)
+Best 2-channel configuration is a mixed pair in 12 of 12 position x model cells
+saved table: MP_complementarity_mixed_vs_pure.csv (12, 17)
+saved table: MP_complementarity_by_pair.csv (180, 5)
+saved table: MG_marginal_axis_gain.csv (288, 21)
+PASS definition-1 marginal gains reproduce the repository's Table06 (3-decimal rounding) | max |diff| = 0.0005
+saved table: RANK_model_agreement.csv (15, 11)
+saved table: RANK_pairwise_spearman.csv (90, 5)
+saved table: RANK_top_configuration_by_model.csv (36, 6)
+PASS CNN seeds are 42-46 | [np.int64(42), np.int64(43), np.int64(44), np.int64(45), np.int64(46)]
+PASS classical seeds are 42-44 | [np.int64(42), np.int64(43), np.int64(44)]
+PASS CNN seed grid complete (15 configs x 3 positions x 10 subjects x 5 seeds) | 2250
+saved table: SEED_variability_cells.csv (180, 13)
+saved table: SEED_sd_by_model_channels.csv (16, 6)
+Median seed SD of the 10-subject mean macro-F1 by model: {'CNN': 0.0025, 'RF': 0.0013, 'SVM': 0.0022, 'XGB': 0.0012}
+saved table: SEED_headline_6axis.csv (12, 8)
+saved table: E_all_with_seed_noise_reference.csv (360, 32)
+Extension: 0 Holm-significant decreases are smaller than 3 x the model's median seed SD (read with caution)
+saved table: SEED_cnn_underfit_by_channels.csv (4, 4)
+saved table: SEED_cnn_underfit_by_config.csv (11, 5)
+CNN units with final training loss > 0.5: 422 of 2250 (primary grid, 5 seeds); extended CNN units flagged: 0 of 450
+saved table: SEED_primary_reduction_by_seed.csv (756, 31)
+saved table: SEED_holm_counts_by_seed.csv (18, 5)
+PASS seed-wise Holm counts agree with notebook 04c's table | 18 model x seed rows compared
+saved table: SEED_margin_map.csv (8, 6)
+seed 42: configurations meeting the -0.05 margin in all four models -> leg:gyro-3
+seed 43: configurations meeting the -0.05 margin in all four models -> (none)
+seed 44: configurations meeting the -0.05 margin in all four models -> leg:gyro-3
+seed mean: configurations meeting the -0.05 margin in all four models -> leg:gyro-3
+saved table: PC_perclass_drop_extended_configs.csv (2160, 8)
+saved table: PC_mixAxGz_perclass_tests.csv (144, 19)
+PASS every latency unit has a matching macro-F1 cell
+saved table: SYS_latency_size_f1_merged.csv (360, 60)
+latency QC: {'n_units': 360, 'pass_range_pct_median': 2.49782838323127, 'pass_range_pct_max': 20.26270565655541, 'share_units_pass_range_over_10pct': 0.044444444444444446}
+latency machine(s): ['Intel(R) Xeon(R) CPU @ 2.00GHz'] | sessions: ['20261113T123744Z']
+PASS latency measured in a single session on a single machine | ['6eac3c09da2a']
+saved table: SYS_data_volume_analytic.csv (30, 11)
+PASS analytic data volume agrees with notebook 05's TableL4 | 30 configs
+saved table: SYS_cost_by_channel_count.csv (20, 12)
+saved table: SYS_trend_by_model.csv (4, 7)
+saved table: SYS_pareto_sets.csv (360, 12)
+saved table: SYS_pareto_recurrence.csv (11, 3)
+saved table: SYS_retention_threshold_by_channel_count.csv (144, 9)
+saved table: SYS_fewest_channels_for_retention.csv (36, 4)
+PASS extended master table has 360 rows | 360
+saved table: master_results_extended.csv (360, 38)
+saved table: master_results_extended_dictionary.csv (38, 2)
+Configurations meeting the -0.05 margin in all four models (seed 42, all 30 configurations): ['leg:drop-Ax', 'leg:drop-Ay', 'leg:drop-Az', 'leg:drop-Gx', 'leg:drop-Gy', 'leg:gyro-3', 'pocket:drop-Ay', 'pocket:drop-Az', 'pocket:drop-Gx', 'pocket:drop-Gy', 'pocket:drop-Gz', 'wrist:drop-Ay', 'wrist:drop-Az', 'wrist:drop-Gx', 'wrist:drop-Gy', 'wrist:drop-Gz']
+saved table: GUIDE_practical_by_position_and_channel_count.csv (12, 8)
+saved table: claims_to_sources_manifest.csv (58, 5)
+saved figure: FX1_macroF1_heatmap_30_configs
+saved figure: FX2_E1_E2_vs_6axis
+saved figure: FX3_best_median_worst_by_channel_count
+saved figure: FX4_pareto_f1_vs_data_rate
+saved figure: FX5_pairs_by_type
+saved figure: FX6_model_ranking_agreement
+saved figure: FX7_seed_sd_by_channels
+saved figure: FX8_systems_vs_channels
+saved figure: FX9_complementarity_mixed_vs_pure
+saved figure: FX10_perclass_mixAxGz
+saved figure: FX11_selection_optimism

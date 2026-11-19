@@ -1,0 +1,296 @@
+[
+  {
+    "check": "unit count: classical primary",
+    "passed": true,
+    "hard": true,
+    "detail": "1350 rows, expected 1350"
+  },
+  {
+    "check": "unit count: CNN primary (seed 42)",
+    "passed": true,
+    "hard": true,
+    "detail": "450 rows, expected 450"
+  },
+  {
+    "check": "unit count: extended (A1+A2, 4 models)",
+    "passed": true,
+    "hard": true,
+    "detail": "1800 rows, expected 1800"
+  },
+  {
+    "check": "unit count: classical seed 43",
+    "passed": true,
+    "hard": true,
+    "detail": "1350 rows, expected 1350"
+  },
+  {
+    "check": "unit count: classical seed 44",
+    "passed": true,
+    "hard": true,
+    "detail": "1350 rows, expected 1350"
+  },
+  {
+    "check": "unit count: CNN seeds 43-46",
+    "passed": true,
+    "hard": true,
+    "detail": "1800 rows, expected 1800"
+  },
+  {
+    "check": "unit count: latency (30 configs x 3 pos x 4 models)",
+    "passed": true,
+    "hard": true,
+    "detail": "360 rows, expected 360"
+  },
+  {
+    "check": "no duplicate units: classical primary",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "no duplicate units: CNN primary",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "no duplicate units: extended",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "no duplicate units: classical seed 43",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "no duplicate units: classical seed 44",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "no duplicate units: CNN seeds 43-46",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "unified grid has no duplicate (position, model, config, subject)",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "10 LOSO subjects in every file",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "every (position, model, config) cell has 10 subjects",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "fold -> held-out subject mapping identical to primary: extended",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "fold -> held-out subject mapping identical to primary: classical seed 43",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "fold -> held-out subject mapping identical to primary: classical seed 44",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "fold -> held-out subject mapping identical to primary: CNN seeds 43-46",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "test-window counts equal the primary grid: extended",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "test-window counts equal the primary grid: classical seed 43",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "test-window counts equal the primary grid: CNN seeds 43-46",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "channel strings agree with configuration names",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "classical n_features = 15 x n_channels (no cross-channel features)",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "n_channels column agrees with configuration name",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "macro-F1 values lie in [0, 1]",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "group labels: P for primary, A1 for drop-one, A2 for mixed pairs",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "RecGym.csv SHA-256 recorded in the runs equals the frozen hash (where recorded)",
+    "passed": true,
+    "hard": false,
+    "detail": "7 of 7 runs record it: ['classical_full', 'classical_seed43', 'classical_seed44', 'cnn_full', 'cnn_seeds43-46_full', 'extended_full', 'latency_full']"
+  },
+  {
+    "check": "anchor within tolerance: extended_full XGB leg fold 0 6-axis",
+    "passed": false,
+    "hard": false,
+    "detail": "|diff| = 0.0034 (tolerance 0.001); non-blocking, see seed SD in block 9"
+  },
+  {
+    "check": "label-shuffle controls stay below the run thresholds",
+    "passed": true,
+    "hard": false,
+    "detail": ""
+  },
+  {
+    "check": "subject x unit matrix complete (macro_f1)",
+    "passed": true,
+    "hard": true,
+    "detail": "(360, 10)"
+  },
+  {
+    "check": "subject x unit matrix complete (macro_f1_workouts)",
+    "passed": true,
+    "hard": true,
+    "detail": "(360, 10)"
+  },
+  {
+    "check": "primary grid has 168 comparisons (14 configs x 3 positions x 4 models)",
+    "passed": true,
+    "hard": true,
+    "detail": "168"
+  },
+  {
+    "check": "every primary cell found in master_results.csv",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "reproduces master_results.csv: cell means",
+    "passed": true,
+    "hard": false,
+    "detail": "max |diff| = 4.99e-07"
+  },
+  {
+    "check": "reproduces master_results.csv: paired differences vs 6-axis",
+    "passed": true,
+    "hard": false,
+    "detail": "max |diff| = 4.99e-07"
+  },
+  {
+    "check": "reproduces master_results.csv: Holm-adjusted p",
+    "passed": true,
+    "hard": false,
+    "detail": "max |diff| = 3.75e-07"
+  },
+  {
+    "check": "reproduces master_results.csv: bootstrap CI bounds",
+    "passed": true,
+    "hard": false,
+    "detail": "max |diff| = 4.99e-07"
+  },
+  {
+    "check": "Holm-significant decrease count equals master_results.csv",
+    "passed": true,
+    "hard": false,
+    "detail": "recomputed 160, master 160"
+  },
+  {
+    "check": "definition-1 marginal gains reproduce the repository's Table06 (3-decimal rounding)",
+    "passed": true,
+    "hard": false,
+    "detail": "max |diff| = 0.0005"
+  },
+  {
+    "check": "CNN seeds are 42-46",
+    "passed": true,
+    "hard": true,
+    "detail": "[np.int64(42), np.int64(43), np.int64(44), np.int64(45), np.int64(46)]"
+  },
+  {
+    "check": "classical seeds are 42-44",
+    "passed": true,
+    "hard": true,
+    "detail": "[np.int64(42), np.int64(43), np.int64(44)]"
+  },
+  {
+    "check": "CNN seed grid complete (15 configs x 3 positions x 10 subjects x 5 seeds)",
+    "passed": true,
+    "hard": true,
+    "detail": "2250"
+  },
+  {
+    "check": "seed-wise Holm counts agree with notebook 04c's table",
+    "passed": true,
+    "hard": false,
+    "detail": "18 model x seed rows compared"
+  },
+  {
+    "check": "every latency unit has a matching macro-F1 cell",
+    "passed": true,
+    "hard": true,
+    "detail": ""
+  },
+  {
+    "check": "latency measured in a single session on a single machine",
+    "passed": true,
+    "hard": false,
+    "detail": "['6eac3c09da2a']"
+  },
+  {
+    "check": "analytic data volume agrees with notebook 05's TableL4",
+    "passed": true,
+    "hard": false,
+    "detail": "30 configs"
+  },
+  {
+    "check": "extended master table has 360 rows",
+    "passed": true,
+    "hard": true,
+    "detail": "360"
+  }
+]

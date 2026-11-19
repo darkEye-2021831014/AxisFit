@@ -1,0 +1,202 @@
+{
+  "description": "Extended 30-configuration lattice: the 15 primary configurations in axis_configs.json plus the drop-one and mixed-pair groups. Derived from the lattice definition in the paper (Materials and Methods, 'Axis lattice'); config names follow the paper (e.g. drop-Ay, mix-AxGz). Mixed three-axis and all four-axis subsets were deliberately not run.",
+  "primary_group_file": "axis_configs.json",
+  "groups": {
+    "primary": [
+      "6-axis",
+      "acc-3",
+      "gyro-3",
+      "acc-AxAy",
+      "acc-AxAz",
+      "acc-AyAz",
+      "gyro-GxGy",
+      "gyro-GxGz",
+      "gyro-GyGz",
+      "single-Ax",
+      "single-Ay",
+      "single-Az",
+      "single-Gx",
+      "single-Gy",
+      "single-Gz"
+    ],
+    "drop_one": [
+      "drop-Ax",
+      "drop-Ay",
+      "drop-Az",
+      "drop-Gx",
+      "drop-Gy",
+      "drop-Gz"
+    ],
+    "mixed_pair": [
+      "mix-AxGx",
+      "mix-AxGy",
+      "mix-AxGz",
+      "mix-AyGx",
+      "mix-AyGy",
+      "mix-AyGz",
+      "mix-AzGx",
+      "mix-AzGy",
+      "mix-AzGz"
+    ]
+  },
+  "configs": {
+    "6-axis": [
+      "Ax",
+      "Ay",
+      "Az",
+      "Gx",
+      "Gy",
+      "Gz"
+    ],
+    "acc-3": [
+      "Ax",
+      "Ay",
+      "Az"
+    ],
+    "gyro-3": [
+      "Gx",
+      "Gy",
+      "Gz"
+    ],
+    "acc-AxAy": [
+      "Ax",
+      "Ay"
+    ],
+    "acc-AxAz": [
+      "Ax",
+      "Az"
+    ],
+    "acc-AyAz": [
+      "Ay",
+      "Az"
+    ],
+    "gyro-GxGy": [
+      "Gx",
+      "Gy"
+    ],
+    "gyro-GxGz": [
+      "Gx",
+      "Gz"
+    ],
+    "gyro-GyGz": [
+      "Gy",
+      "Gz"
+    ],
+    "single-Ax": [
+      "Ax"
+    ],
+    "single-Ay": [
+      "Ay"
+    ],
+    "single-Az": [
+      "Az"
+    ],
+    "single-Gx": [
+      "Gx"
+    ],
+    "single-Gy": [
+      "Gy"
+    ],
+    "single-Gz": [
+      "Gz"
+    ],
+    "drop-Ax": [
+      "Ay",
+      "Az",
+      "Gx",
+      "Gy",
+      "Gz"
+    ],
+    "drop-Ay": [
+      "Ax",
+      "Az",
+      "Gx",
+      "Gy",
+      "Gz"
+    ],
+    "drop-Az": [
+      "Ax",
+      "Ay",
+      "Gx",
+      "Gy",
+      "Gz"
+    ],
+    "drop-Gx": [
+      "Ax",
+      "Ay",
+      "Az",
+      "Gy",
+      "Gz"
+    ],
+    "drop-Gy": [
+      "Ax",
+      "Ay",
+      "Az",
+      "Gx",
+      "Gz"
+    ],
+    "drop-Gz": [
+      "Ax",
+      "Ay",
+      "Az",
+      "Gx",
+      "Gy"
+    ],
+    "mix-AxGx": [
+      "Ax",
+      "Gx"
+    ],
+    "mix-AxGy": [
+      "Ax",
+      "Gy"
+    ],
+    "mix-AxGz": [
+      "Ax",
+      "Gz"
+    ],
+    "mix-AyGx": [
+      "Ay",
+      "Gx"
+    ],
+    "mix-AyGy": [
+      "Ay",
+      "Gy"
+    ],
+    "mix-AyGz": [
+      "Ay",
+      "Gz"
+    ],
+    "mix-AzGx": [
+      "Az",
+      "Gx"
+    ],
+    "mix-AzGy": [
+      "Az",
+      "Gy"
+    ],
+    "mix-AzGz": [
+      "Az",
+      "Gz"
+    ]
+  },
+  "seeds": {
+    "primary_classical": [
+      42,
+      43,
+      44
+    ],
+    "primary_cnn": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "drop_one": [
+      42
+    ],
+    "mixed_pair": [
+      42
+    ]
+  }
+}

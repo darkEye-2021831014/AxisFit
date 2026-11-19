@@ -1,0 +1,90 @@
+
+===== session 2026-11-12T12:52:27.615824+00:00 | chunk {"positions": ["leg", "pocket", "wrist"], "models": ["XGB", "RF", "SVM"], "configs": ["6-axis", "acc-3", "gyro-3", "acc-AxAy", "acc-AxAz", "acc-AyAz", "gyro-GxGy", "gyro-GxGz", "gyro-GyGz", "single-Ax", "single-Ay", "single-Az", "single-Gx", "single-Gy", "single-Gz"], "folds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "seed": 44, "smoke_test": false, "xgb_device": "cuda", "time_budget_min": null} =====
+SMOKE_TEST = False | seed: 44 | run dir: results/raw/classical_seed44 | models: ['XGB', 'RF', 'SVM'] | positions: all | folds: all | time budget (min): None
+Primary configurations verified against protocol/axis_configs.json: 15
+Configs this chunk ( 15 ): ['6-axis', 'acc-3', 'gyro-3', 'acc-AxAy', 'acc-AxAz', 'acc-AyAz', 'gyro-GxGy', 'gyro-GxGz', 'gyro-GyGz', 'single-Ax', 'single-Ay', 'single-Az', 'single-Gx', 'single-Gy', 'single-Gz']
+SHA-256: 2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9
+Hash matches the audited file.
+Loaded: (4703320, 11) ['Subject', 'Position', 'Session', 'A_x', 'A_y', 'A_z', 'G_x', 'G_y', 'G_z', 'C_1', 'Workout']
+Roles: {'subject': 'Subject', 'label': 'Workout', 'position': 'Position', 'session': 'Session'} | channels: {'Ax': 'A_x', 'Ay': 'A_y', 'Az': 'A_z', 'Gx': 'G_x', 'Gy': 'G_y', 'Gz': 'G_z'}
+Subjects: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+Positions: ['leg', 'pocket', 'wrist']
+Labels: ['Adductor', 'ArmCurl', 'BenchPress', 'LegCurl', 'LegPress', 'Null', 'Riding', 'RopeSkipping', 'Running', 'Squat', 'StairClimber', 'Walking'] | null ids: [5]
+Sessions: ['1', '2', '3', '4', '5']
+Runs: 9589 | window = 80 samples, step = 40
+Windows: 105728 | rows dropped (runs shorter than window): 40743 | window-start hash: d12f06d035e12591 ...
+VERIFIED: windows are identical to protocol/windows_index.parquet.
+VERIFIED: window-start hash equals the primary CNN run's.
+Folds verified against protocol/loso_folds.json | folds this chunk: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Feature unit tests passed for all 15 primary subsets. 15 features per channel.
+leg: windows=33272 | features=(33272, 90)
+pocket: windows=35935 | features=(35935, 90)
+wrist: windows=36521 | features=(36521, 90)
+Per-position data prepared in 13.4 s
+Units already completed in classical_seed44 : 0
+Chunk = 3 position(s) x 10 fold(s) x 15 config(s) x models ['XGB', 'RF', 'SVM'] = 1350 units | already done: 0 | to run: 1350
+Label-shuffle control XGB on leg fold 0 config 6-axis: macro-F1 = 0.069 (chance ~ 0.083) in 10.8s
+Label-shuffle control RF on leg fold 0 config 6-axis: macro-F1 = 0.058 (chance ~ 0.083) in 52.7s
+Label-shuffle control SVM on leg fold 0 config 6-axis: macro-F1 = 0.031 (chance ~ 0.083) in 107.9s
+Check 2 passed: SVM sub-sample differs from seed 42's (overlap 0.492 of 15000 windows).
+Anchor XGB 6-axis leg fold 0 (seed 42): here 0.7931 vs primary 0.7931 (|diff| 0.0000, tolerance 0.001) -> OK
+Anchor RF 6-axis leg fold 0 (seed 42): here 0.7223 vs primary 0.7223 (|diff| 0.0000, tolerance 0.001) -> OK
+Anchor SVM 6-axis leg fold 0 (seed 42): here 0.7501 vs primary 0.7501 (|diff| 0.0000, tolerance 0.001) -> OK
+[1/1350] leg fold=0 6-axis XGB: macroF1=0.795 fit=6.8s | elapsed 0.1 min, ETA ~ 161.9 min
+[25/1350] leg fold=0 gyro-GyGz XGB: macroF1=0.776 fit=5.4s | elapsed 5.8 min, ETA ~ 307.7 min
+[50/1350] leg fold=1 acc-3 RF: macroF1=0.629 fit=21.9s | elapsed 10.9 min, ETA ~ 283.8 min
+[75/1350] leg fold=1 single-Ax SVM: macroF1=0.582 fit=11.6s | elapsed 16.2 min, ETA ~ 276.0 min
+[100/1350] leg fold=2 acc-AxAy XGB: macroF1=0.793 fit=5.4s | elapsed 21.5 min, ETA ~ 268.7 min
+[125/1350] leg fold=2 single-Az RF: macroF1=0.617 fit=11.3s | elapsed 26.7 min, ETA ~ 261.9 min
+[150/1350] leg fold=3 acc-AxAz SVM: macroF1=0.676 fit=12.8s | elapsed 32.4 min, ETA ~ 259.3 min
+[175/1350] leg fold=3 single-Gy XGB: macroF1=0.647 fit=5.3s | elapsed 37.3 min, ETA ~ 250.5 min
+[200/1350] leg fold=4 gyro-GxGy RF: macroF1=0.487 fit=18.2s | elapsed 43.1 min, ETA ~ 247.6 min
+[225/1350] leg fold=4 single-Gz SVM: macroF1=0.731 fit=7.2s | elapsed 47.8 min, ETA ~ 238.9 min
+[250/1350] leg fold=5 gyro-GyGz XGB: macroF1=0.767 fit=5.4s | elapsed 53.5 min, ETA ~ 235.6 min
+[275/1350] leg fold=6 acc-3 RF: macroF1=0.811 fit=21.9s | elapsed 58.7 min, ETA ~ 229.4 min
+[300/1350] leg fold=6 single-Ax SVM: macroF1=0.640 fit=12.8s | elapsed 64.2 min, ETA ~ 224.6 min
+[325/1350] leg fold=7 acc-AxAy XGB: macroF1=0.808 fit=5.5s | elapsed 69.5 min, ETA ~ 219.0 min
+[350/1350] leg fold=7 single-Az RF: macroF1=0.560 fit=11.4s | elapsed 74.7 min, ETA ~ 213.5 min
+[375/1350] leg fold=8 acc-AxAz SVM: macroF1=0.650 fit=12.8s | elapsed 80.4 min, ETA ~ 208.9 min
+[400/1350] leg fold=8 single-Gy XGB: macroF1=0.502 fit=5.4s | elapsed 85.2 min, ETA ~ 202.4 min
+[425/1350] leg fold=9 gyro-GxGy RF: macroF1=0.588 fit=18.7s | elapsed 91.1 min, ETA ~ 198.2 min
+[450/1350] leg fold=9 single-Gz SVM: macroF1=0.634 fit=7.1s | elapsed 95.8 min, ETA ~ 191.6 min
+[475/1350] pocket fold=0 gyro-GyGz XGB: macroF1=0.554 fit=6.0s | elapsed 102.8 min, ETA ~ 189.4 min
+[500/1350] pocket fold=1 acc-3 RF: macroF1=0.481 fit=23.3s | elapsed 109.0 min, ETA ~ 185.3 min
+[525/1350] pocket fold=1 single-Ax SVM: macroF1=0.559 fit=15.9s | elapsed 115.7 min, ETA ~ 181.7 min
+[550/1350] pocket fold=2 acc-AxAy XGB: macroF1=0.612 fit=6.0s | elapsed 122.0 min, ETA ~ 177.4 min
+[575/1350] pocket fold=2 single-Az RF: macroF1=0.322 fit=12.8s | elapsed 128.3 min, ETA ~ 172.9 min
+[600/1350] pocket fold=3 acc-AxAz SVM: macroF1=0.519 fit=16.9s | elapsed 135.2 min, ETA ~ 169.0 min
+[625/1350] pocket fold=3 single-Gy XGB: macroF1=0.497 fit=5.3s | elapsed 141.1 min, ETA ~ 163.7 min
+[650/1350] pocket fold=4 gyro-GxGy RF: macroF1=0.418 fit=20.7s | elapsed 148.1 min, ETA ~ 159.5 min
+[675/1350] pocket fold=4 single-Gz SVM: macroF1=0.397 fit=14.5s | elapsed 153.9 min, ETA ~ 153.9 min
+[700/1350] pocket fold=5 gyro-GyGz XGB: macroF1=0.540 fit=6.0s | elapsed 160.8 min, ETA ~ 149.4 min
+[725/1350] pocket fold=6 acc-3 RF: macroF1=0.548 fit=23.9s | elapsed 167.0 min, ETA ~ 144.0 min
+[750/1350] pocket fold=6 single-Ax SVM: macroF1=0.439 fit=17.1s | elapsed 173.7 min, ETA ~ 139.0 min
+[775/1350] pocket fold=7 acc-AxAy XGB: macroF1=0.682 fit=6.0s | elapsed 180.1 min, ETA ~ 133.7 min
+[800/1350] pocket fold=7 single-Az RF: macroF1=0.443 fit=12.8s | elapsed 186.5 min, ETA ~ 128.2 min
+[825/1350] pocket fold=8 acc-AxAz SVM: macroF1=0.462 fit=16.2s | elapsed 193.2 min, ETA ~ 122.9 min
+[850/1350] pocket fold=8 single-Gy XGB: macroF1=0.390 fit=5.4s | elapsed 198.9 min, ETA ~ 117.0 min
+[875/1350] pocket fold=9 gyro-GxGy RF: macroF1=0.327 fit=19.8s | elapsed 205.7 min, ETA ~ 111.7 min
+[900/1350] pocket fold=9 single-Gz SVM: macroF1=0.441 fit=14.4s | elapsed 211.4 min, ETA ~ 105.7 min
+[925/1350] wrist fold=0 gyro-GyGz XGB: macroF1=0.692 fit=5.7s | elapsed 217.3 min, ETA ~ 99.9 min
+[950/1350] wrist fold=1 acc-3 RF: macroF1=0.792 fit=24.0s | elapsed 222.9 min, ETA ~ 93.9 min
+[975/1350] wrist fold=1 single-Ax SVM: macroF1=0.603 fit=12.1s | elapsed 228.5 min, ETA ~ 87.9 min
+[1000/1350] wrist fold=2 acc-AxAy XGB: macroF1=0.788 fit=5.6s | elapsed 234.2 min, ETA ~ 82.0 min
+[1025/1350] wrist fold=2 single-Az RF: macroF1=0.588 fit=12.0s | elapsed 239.7 min, ETA ~ 76.0 min
+[1050/1350] wrist fold=3 acc-AxAz SVM: macroF1=0.669 fit=10.9s | elapsed 245.6 min, ETA ~ 70.2 min
+[1075/1350] wrist fold=3 single-Gy XGB: macroF1=0.527 fit=5.4s | elapsed 250.8 min, ETA ~ 64.2 min
+[1100/1350] wrist fold=4 gyro-GxGy RF: macroF1=0.627 fit=20.8s | elapsed 256.8 min, ETA ~ 58.4 min
+[1125/1350] wrist fold=4 single-Gz SVM: macroF1=0.495 fit=9.6s | elapsed 261.9 min, ETA ~ 52.4 min
+[1150/1350] wrist fold=5 gyro-GyGz XGB: macroF1=0.684 fit=5.7s | elapsed 267.8 min, ETA ~ 46.6 min
+[1175/1350] wrist fold=6 acc-3 RF: macroF1=0.830 fit=23.5s | elapsed 273.2 min, ETA ~ 40.7 min
+[1200/1350] wrist fold=6 single-Ax SVM: macroF1=0.572 fit=12.2s | elapsed 278.9 min, ETA ~ 34.9 min
+[1225/1350] wrist fold=7 acc-AxAy XGB: macroF1=0.873 fit=5.7s | elapsed 284.4 min, ETA ~ 29.0 min
+[1250/1350] wrist fold=7 single-Az RF: macroF1=0.637 fit=13.3s | elapsed 289.9 min, ETA ~ 23.2 min
+[1275/1350] wrist fold=8 acc-AxAz SVM: macroF1=0.777 fit=10.6s | elapsed 295.9 min, ETA ~ 17.4 min
+[1300/1350] wrist fold=8 single-Gy XGB: macroF1=0.558 fit=5.3s | elapsed 301.1 min, ETA ~ 11.6 min
+[1325/1350] wrist fold=9 gyro-GxGy RF: macroF1=0.736 fit=21.0s | elapsed 307.2 min, ETA ~ 5.8 min
+[1350/1350] wrist fold=9 single-Gz SVM: macroF1=0.515 fit=10.1s | elapsed 312.3 min, ETA ~ 0.0 min
+Loop finished. New units this session: 1350 | chunk units done: 1350 of 1350 | stopped early: False
+Rows in results.csv: 1350 | chunk units present: 1350 of 1350 | COMPLETE
+Seed 44 vs seed 42 over 1350 matched units | mean |cell-level diff|: 0.002 | max |cell-level diff|: 0.0104

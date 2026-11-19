@@ -1,0 +1,166 @@
+{
+  "notebook": "03_analysis.ipynb",
+  "timestamp_utc": "2026-10-23T08:17:50.539565+00:00",
+  "inputs": {
+    "recgym_01_classical_full.zip": "26e5adeb38405f59421454164f672f6fa0f3b758c4de43c6b187230e27ab7da6",
+    "recgym_02_cnn_full.zip": "fe25d386ef6fb09e0c2f7ea021c878b356f323a59e65c682f9444dfa32596504",
+    "01_results.csv": "aa75dc5475d8ea036b7667e07263de549b00e332f2fd49ad62df73be2f817665",
+    "02_results.csv": "27e346c989cc6a23bc96694c239ba6edda6069816bb404ddd90e0d3172c81639"
+  },
+  "parameters": {
+    "SEED": 42,
+    "N_BOOT": 10000,
+    "ALPHA": 0.05,
+    "DELTAS": [
+      0.02,
+      0.03,
+      0.05
+    ],
+    "PRIMARY_METRIC": "macro_f1",
+    "SENS_METRIC": "macro_f1_workouts",
+    "KEY_CONFIGS": [
+      "6-axis",
+      "acc-3",
+      "gyro-3"
+    ],
+    "FS": 20
+  },
+  "cnn_seeds": [
+    42
+  ],
+  "data_sha256": "2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9",
+  "classical_config_hash": "7d8a6850660e83afca1a9d829d54ef68fa70eca5c80b198e089258db63d6c973",
+  "cnn_config_hash": "b4fcd438b26677a20086d9bb7081030b0ec7f813e1114e3de74959462dae1dc5",
+  "integrity_checks": {
+    "required columns present (01)": {
+      "ok": true,
+      "detail": ""
+    },
+    "required columns present (02)": {
+      "ok": true,
+      "detail": ""
+    },
+    "models in 01 are RF, SVM, XGB": {
+      "ok": true,
+      "detail": "['RF', 'SVM', 'XGB']"
+    },
+    "model in 02 is CNN": {
+      "ok": true,
+      "detail": ""
+    },
+    "positions as expected (01)": {
+      "ok": true,
+      "detail": "['leg', 'pocket', 'wrist']"
+    },
+    "15 configurations as expected (01)": {
+      "ok": true,
+      "detail": ""
+    },
+    "folds are 0..9 (01)": {
+      "ok": true,
+      "detail": ""
+    },
+    "positions as expected (02)": {
+      "ok": true,
+      "detail": "['leg', 'pocket', 'wrist']"
+    },
+    "15 configurations as expected (02)": {
+      "ok": true,
+      "detail": ""
+    },
+    "folds are 0..9 (02)": {
+      "ok": true,
+      "detail": ""
+    },
+    "01 has no duplicate units": {
+      "ok": true,
+      "detail": ""
+    },
+    "02 has no duplicate units": {
+      "ok": true,
+      "detail": ""
+    },
+    "01 grid complete (3 models x 3 positions x 15 configs x 10 folds)": {
+      "ok": true,
+      "detail": "1350"
+    },
+    "02 grid complete (3 positions x 15 configs x 10 folds x n_seeds)": {
+      "ok": true,
+      "detail": "450 rows, seeds [np.int64(42)]"
+    },
+    "combined table is 4 models x 3 positions x 15 configs x 10 folds": {
+      "ok": true,
+      "detail": "1800"
+    },
+    "each fold maps to exactly one held-out subject (all positions and models)": {
+      "ok": true,
+      "detail": ""
+    },
+    "10 distinct held-out subjects": {
+      "ok": true,
+      "detail": "[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10)]"
+    },
+    "same train/test window counts for all models and configs within a (position, fold)": {
+      "ok": true,
+      "detail": ""
+    },
+    "n_channels matches the configuration name": {
+      "ok": true,
+      "detail": "{'6-axis': 6, 'acc-3': 3, 'gyro-3': 3, 'acc-AxAy': 2, 'acc-AxAz': 2, 'acc-AyAz': 2, 'gyro-GxGy': 2, 'gyro-GxGz': 2, 'gyro-GyGz': 2, 'single-Ax': 1, 'single-Ay': 1, 'single-Az': 1, 'single-Gx': 1, 'single-Gy': 1, 'single-Gz': 1}"
+    },
+    "metrics are finite and within [0, 1]": {
+      "ok": true,
+      "detail": ""
+    },
+    "label-shuffle control passed in notebook 02": {
+      "ok": true,
+      "detail": "shuffled macro-F1 0.0328 (threshold 0.25, chance 0.0833)"
+    },
+    "notebook 02 verified its windows against notebook 01": {
+      "ok": true,
+      "detail": ""
+    },
+    "both notebooks used the same RecGym.csv (SHA-256)": {
+      "ok": true,
+      "detail": "2031c077a57e93d6..."
+    },
+    "notebook 02 ran with seeds as recorded": {
+      "ok": true,
+      "detail": "[42]"
+    },
+    "notebook 02 was the full run, not the smoke test": {
+      "ok": true,
+      "detail": ""
+    },
+    "class support is identical for every model/config in 01": {
+      "ok": true,
+      "detail": ""
+    },
+    "class support is identical for every config/seed in 02": {
+      "ok": true,
+      "detail": ""
+    },
+    "class support agrees between 01 and 02": {
+      "ok": true,
+      "detail": ""
+    },
+    "macro-F1 recomputed from per-class F1 (max abs error)": {
+      "ok": true,
+      "detail": "all-12: 3.33e-16; workouts: 3.33e-16"
+    }
+  },
+  "packages": {
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.0"
+  },
+  "notes": [
+    "Wilcoxon min possible exact p with n=10 is 2/1024",
+    "Axes are device-frame",
+    "Latency: Colab CPU, not edge",
+    "Provider normalization undocumented",
+    "CNN has one seed unless cnn_seeds lists more"
+  ]
+}

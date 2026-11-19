@@ -1,0 +1,9 @@
+{
+  "chunk_units": 1800,
+  "present": 1800,
+  "missing": 0,
+  "complete": true,
+  "stopped_early": false,
+  "rows_in_results_csv": 1800,
+  "missing_examples": []
+}

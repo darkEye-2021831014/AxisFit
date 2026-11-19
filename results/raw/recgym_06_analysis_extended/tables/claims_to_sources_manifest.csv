@@ -1,0 +1,59 @@
+claim_id,statement,value,source_table,source_table_exists
+primary_n_sig,Primary grid: Holm-significant decreases among 168 reduced-vs-6-axis comparisons (seed 42),160,A_primary_reduction_vs_6axis,True
+E1_n_sig,E1 drop-one: Holm-significant decreases among 72 tests,28,E1_drop_one_vs_6axis,True
+E2_n_sig,E2 mixed pairs: Holm-significant decreases among 108 tests,103,E2_mixed_pairs_vs_6axis,True
+E1_n_margin,E1 drop-one: tests whose CI lower bound exceeds -0.05,64,E1_drop_one_vs_6axis,True
+E2_n_margin,E2 mixed pairs: tests whose CI lower bound exceeds -0.05,1,E2_mixed_pairs_vs_6axis,True
+drop_worst_wrist,Most damaging axis to remove at wrist (modal over models; models agreeing),Ax (4/4),E1_drop_one_cost_by_axis,True
+drop_worst_leg,Most damaging axis to remove at leg (modal over models; models agreeing),Gz (4/4),E1_drop_one_cost_by_axis,True
+drop_worst_pocket,Most damaging axis to remove at pocket (modal over models; models agreeing),Ax (4/4),E1_drop_one_cost_by_axis,True
+sel_optimism_max,Largest best-of optimism (naive best minus LOSO-selected macro-F1) over all cells,0.0237,SEL_loso_selection_optimism,True
+sel_optimism_median,Median best-of optimism over all cells,0.0000,SEL_loso_selection_optimism,True
+mixed_selfree_pos_cells,Cells (of 12) where mixed pairs beat the mean pure pair (mean difference > 0),8,MP_mixed_vs_pure_pairs,True
+mixed_selfree_sig_cells,Cells (of 12) where that difference is Holm-significant (either direction),9,MP_mixed_vs_pure_pairs,True
+axgz_ci_above0_cells,Cells (of 12) where mix-AxGz minus best pure pair has a CI lower bound above 0,4,MP_mixed_vs_pure_pairs,True
+axgz_mean_diff_range,mix-AxGz minus best pure pair: range of mean differences over 12 cells,-0.006 to 0.060,MP_mixed_vs_pure_pairs,True
+best2_is_mixed_cells,Cells (of 12) where the best 2-channel configuration is a mixed pair,12,BMW_best_median_worst_by_channel_count,True
+mg1_top_wrist,"Definition-1 marginal gain, two largest axes at wrist (mean over models)",Ax +0.173; Gz +0.170,MG_marginal_axis_gain,True
+mg1_top_leg,"Definition-1 marginal gain, two largest axes at leg (mean over models)",Gz +0.210; Ax +0.109,MG_marginal_axis_gain,True
+mg1_top_pocket,"Definition-1 marginal gain, two largest axes at pocket (mean over models)",Ax +0.102; Gz +0.086,MG_marginal_axis_gain,True
+rank_w_k2_wrist,Kendall's W across 4 models over the 15 two-channel configurations at wrist,0.961 (95% CI 0.891 to 0.961),RANK_model_agreement,True
+rank_w_k2_leg,Kendall's W across 4 models over the 15 two-channel configurations at leg,0.951 (95% CI 0.910 to 0.976),RANK_model_agreement,True
+rank_w_k2_pocket,Kendall's W across 4 models over the 15 two-channel configurations at pocket,0.955 (95% CI 0.825 to 0.960),RANK_model_agreement,True
+seed_sd_median_RF,Median over cells of the SD across seeds of the 10-subject mean macro-F1 (RF; 3 seeds),0.0013 (max 0.0031),SEED_variability_cells,True
+seed_sd_median_SVM,Median over cells of the SD across seeds of the 10-subject mean macro-F1 (SVM; 3 seeds),0.0022 (max 0.0052),SEED_variability_cells,True
+seed_sd_median_XGB,Median over cells of the SD across seeds of the 10-subject mean macro-F1 (XGB; 3 seeds),0.0012 (max 0.0027),SEED_variability_cells,True
+seed_sd_median_CNN,Median over cells of the SD across seeds of the 10-subject mean macro-F1 (CNN; 5 seeds),0.0025 (max 0.0095),SEED_variability_cells,True
+E_sig_but_small,Extension tests that are Holm-significant decreases yet smaller than 3x the model's median seed SD,0,E_all_with_seed_noise_reference,True
+underfit_total,CNN primary-grid units (5 seeds) with final train loss > 0.5,422 of 2250,SEED_cnn_underfit_by_channels,True
+underfit_ext,Extended-lattice CNN units with final train loss > 0.5,0 of 450,SEED_cnn_underfit_by_channels,True
+margin_all4_seed_42,Primary configurations meeting the -0.05 margin in all four models (seed label 42),leg:gyro-3,SEED_margin_map,True
+margin_all4_seed_43,Primary configurations meeting the -0.05 margin in all four models (seed label 43),(none),SEED_margin_map,True
+margin_all4_seed_44,Primary configurations meeting the -0.05 margin in all four models (seed label 44),leg:gyro-3,SEED_margin_map,True
+margin_all4_seed_mean,Primary configurations meeting the -0.05 margin in all four models (seed label mean),leg:gyro-3,SEED_margin_map,True
+pc_mixAxGz_sig,mix-AxGz per-class tests: Holm-significant changes,33 of 144,PC_mixAxGz_perclass_tests,True
+sys_latency_RF,RF: Spearman rho between channel count and latency ratio vs 6-axis (90 units); median latency ratio at 1 channel; median size ratio at 1 channel,rho +0.61; 0.84; 2.67,SYS_trend_by_model,True
+sys_latency_SVM,SVM: Spearman rho between channel count and latency ratio vs 6-axis (90 units); median latency ratio at 1 channel; median size ratio at 1 channel,rho +0.93; 0.41; 0.49,SYS_trend_by_model,True
+sys_latency_XGB,XGB: Spearman rho between channel count and latency ratio vs 6-axis (90 units); median latency ratio at 1 channel; median size ratio at 1 channel,rho +0.92; 0.43; 1.53,SYS_trend_by_model,True
+sys_latency_CNN,CNN: Spearman rho between channel count and latency ratio vs 6-axis (90 units); median latency ratio at 1 channel; median size ratio at 1 channel,rho +0.17; 0.99; 0.98,SYS_trend_by_model,True
+pareto_front_mixed_share,"Share of Pareto-front points (macro-F1 vs data rate, 12 cells) that are mixed pairs",0.250,SYS_pareto_sets,True
+margin_all4_seed42_all30,"Configurations (of 29 reduced, over 3 positions) meeting the -0.05 margin in all four models, seed 42, extended lattice included",leg:drop-Ax; leg:drop-Ay; leg:drop-Az; leg:drop-Gx; leg:drop-Gy; leg:gyro-3; pocket:drop-Ay; pocket:drop-Az; pocket:drop-Gx; pocket:drop-Gy; pocket:drop-Gz; wrist:drop-Ay; wrist:drop-Az; wrist:drop-Gx; wrist:drop-Gy; wrist:drop-Gz,A_primary_reduction_vs_6axis + E1_drop_one_vs_6axis + E2_mixed_pairs_vs_6axis,True
+claim_only_leg_gyro3,"Is calf gyro-3 still the only configuration meeting the margin in all four models (seed 42, extended lattice)?",False,A_primary_reduction_vs_6axis + E1_drop_one_vs_6axis + E2_mixed_pairs_vs_6axis,True
+claim_no_mixed_configs,Statement 'no configuration mixes accelerometer and gyroscope axes' is superseded: mixed pairs evaluated,9,E2_mixed_pairs_vs_6axis,True
+leg_single_gz,Calf single-Gz: loss vs 6-axis and retained % per model,RF -0.075 (90.6%); SVM -0.107 (86.3%); XGB -0.112 (86.9%); CNN -0.073 (91.1%),A_primary_reduction_vs_6axis,True
+best_single_by_cell,Best single axis per position (modal over models),wrist: single-Gz; leg: single-Gz; pocket: single-Ax,BMW_best_median_worst_by_channel_count,True
+guide_wrist_5,"wrist, 5 channels: modal best configuration (models agreeing), its mean retained %","drop-Az (2/4), 99.7%",GUIDE_practical_by_position_and_channel_count,True
+guide_wrist_3,"wrist, 3 channels: modal best configuration (models agreeing), its mean retained %","acc-3 (4/4), 90.7%",GUIDE_practical_by_position_and_channel_count,True
+guide_wrist_2,"wrist, 2 channels: modal best configuration (models agreeing), its mean retained %","mix-AxGz (4/4), 93.1%",GUIDE_practical_by_position_and_channel_count,True
+guide_wrist_1,"wrist, 1 channels: modal best configuration (models agreeing), its mean retained %","single-Gz (4/4), 71.9%",GUIDE_practical_by_position_and_channel_count,True
+guide_leg_5,"leg, 5 channels: modal best configuration (models agreeing), its mean retained %","drop-Ay (2/4), 99.5%",GUIDE_practical_by_position_and_channel_count,True
+guide_leg_3,"leg, 3 channels: modal best configuration (models agreeing), its mean retained %","gyro-3 (4/4), 96.8%",GUIDE_practical_by_position_and_channel_count,True
+guide_leg_2,"leg, 2 channels: modal best configuration (models agreeing), its mean retained %","mix-AzGz (2/4), 94.4%",GUIDE_practical_by_position_and_channel_count,True
+guide_leg_1,"leg, 1 channels: modal best configuration (models agreeing), its mean retained %","single-Gz (4/4), 88.7%",GUIDE_practical_by_position_and_channel_count,True
+guide_pocket_5,"pocket, 5 channels: modal best configuration (models agreeing), its mean retained %","drop-Gx (3/4), 101.0%",GUIDE_practical_by_position_and_channel_count,True
+guide_pocket_3,"pocket, 3 channels: modal best configuration (models agreeing), its mean retained %","acc-3 (4/4), 93.8%",GUIDE_practical_by_position_and_channel_count,True
+guide_pocket_2,"pocket, 2 channels: modal best configuration (models agreeing), its mean retained %","mix-AxGz (3/4), 90.2%",GUIDE_practical_by_position_and_channel_count,True
+guide_pocket_1,"pocket, 1 channels: modal best configuration (models agreeing), its mean retained %","single-Ax (4/4), 78.9%",GUIDE_practical_by_position_and_channel_count,True
+six_axis_wrist,"6-axis macro-F1 at wrist (RF, SVM, XGB, CNN; seed 42)","RF 0.886, SVM 0.850, XGB 0.935, CNN 0.932",master_results_extended,True
+six_axis_leg,"6-axis macro-F1 at leg (RF, SVM, XGB, CNN; seed 42)","RF 0.797, SVM 0.786, XGB 0.854, CNN 0.812",master_results_extended,True
+six_axis_pocket,"6-axis macro-F1 at pocket (RF, SVM, XGB, CNN; seed 42)","RF 0.547, SVM 0.595, XGB 0.687, CNN 0.653",master_results_extended,True

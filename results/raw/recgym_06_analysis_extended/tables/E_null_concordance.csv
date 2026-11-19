@@ -1,0 +1,3 @@
+family,n,spearman_mean_diff,n_sig_primary,n_sig_null_excluded,n_discordant
+E1_drop_one,72,0.9970094539841793,28,27,1
+E2_mixed_pairs,108,0.9955890899044461,103,103,0

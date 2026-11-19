@@ -1,0 +1,11 @@
+flag,item
+PASS,"10 subjects, 12 labels, 3 positions as documented"
+PASS,No NaN/inf in any channel
+PASS,No constant channels
+PASS,Every subject has every label at every position
+PASS,Every test class appears in the training subjects of every LOSO fold
+PASS,"Each (subject, position) is one contiguous block; file order is temporal"
+PASS,"2 exact duplicate rows (0.000%), not removed"
+WARN,Extra column Session present (not used as a feature)
+WARN,Row counts differ between positions for some subjects: positions are unsynchronised
+INFO,No simple standardisation pattern detected: provider normalisation undocumented

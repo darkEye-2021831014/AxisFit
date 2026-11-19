@@ -1,0 +1,10 @@
+{
+  "seed": 44,
+  "chunk_units": 1350,
+  "present": 1350,
+  "missing": 0,
+  "complete": true,
+  "stopped_early": false,
+  "rows_in_results_csv": 1350,
+  "missing_examples": []
+}

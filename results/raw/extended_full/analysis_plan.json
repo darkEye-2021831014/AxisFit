@@ -1,0 +1,85 @@
+{
+  "note": "Frozen before any extended run. Statistics are computed in notebook 06, not here.",
+  "primary_family": "unchanged: 14 reduced configurations vs 6-axis per position and model, Holm within family",
+  "protocol": {
+    "folds": "LOSO, 10 subjects",
+    "test": "two-sided Wilcoxon signed-rank on 10 paired subject-level macro-F1 values",
+    "ci": "percentile bootstrap over subjects, 10000 resamples, 95 %",
+    "effect_sizes": [
+      "Cohen dz",
+      "rank-biserial r",
+      "sign counts"
+    ],
+    "smallest_exact_two_sided_p_at_n10": 0.00195
+  },
+  "families": {
+    "E1": {
+      "configs": [
+        "drop-Ax",
+        "drop-Ay",
+        "drop-Az",
+        "drop-Gx",
+        "drop-Gy",
+        "drop-Gz"
+      ],
+      "comparison": "each vs 6-axis (primary grid)",
+      "holm": "per position and model"
+    },
+    "E2": {
+      "configs": [
+        "mix-AxGx",
+        "mix-AxGy",
+        "mix-AxGz",
+        "mix-AyGx",
+        "mix-AyGy",
+        "mix-AyGz",
+        "mix-AzGx",
+        "mix-AzGy",
+        "mix-AzGz"
+      ],
+      "comparison": "each vs 6-axis (primary grid)",
+      "holm": "per position and model"
+    },
+    "E3": {
+      "configs": [
+        "mix-AxAyGx",
+        "mix-AxAyGy",
+        "mix-AxAyGz",
+        "mix-AxAzGx",
+        "mix-AxAzGy",
+        "mix-AxAzGz",
+        "mix-AxGxGy",
+        "mix-AxGxGz",
+        "mix-AxGyGz",
+        "mix-AyAzGx",
+        "mix-AyAzGy",
+        "mix-AyAzGz",
+        "mix-AyGxGy",
+        "mix-AyGxGz",
+        "mix-AyGyGz",
+        "mix-AzGxGy",
+        "mix-AzGxGz",
+        "mix-AzGyGz"
+      ],
+      "comparison": "each vs 6-axis (primary grid), only if A3 was run",
+      "holm": "per position and model"
+    }
+  },
+  "exploratory_contrast": {
+    "contrast": "mix-AxGz vs best pure 2-channel configuration per placement",
+    "caveat": "the best pure pair is selected on the same folds; optimistic; report paired difference, CI and sign count"
+  },
+  "selection_bias_control": "best / median / worst macro-F1 over all configurations of each channel count (5,4,3,2,1), pure and mixed",
+  "marginal_gain": {
+    "definition_1": "adding an axis to a non-empty subset of the same sensor (original)",
+    "definition_2": "adding an axis to any non-empty subset"
+  },
+  "claims_to_recheck": [
+    "no configuration mixes accelerometer and gyroscope axes",
+    "only calf gyro-3 meets the 0.05 margin in all four models",
+    "best configuration per channel count statements",
+    "single-Gz 83.3 % data-rate reduction losses"
+  ],
+  "energy": "no energy claim; channel count sets data to sample, send, store and process",
+  "latency_note": "latency columns come from the machine that ran each chunk and are not comparable across chunks (WP-D re-measures)"
+}

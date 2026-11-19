@@ -1,0 +1,30 @@
+{
+  "XGB": {
+    "label_shuffle_macro_f1": 0.06517228072079868,
+    "chance_reference": 0.08333333333333333,
+    "position": "leg",
+    "fold": 0,
+    "config": "6-axis",
+    "threshold": 0.25,
+    "seed": 43
+  },
+  "RF": {
+    "label_shuffle_macro_f1": 0.057629188611556366,
+    "chance_reference": 0.08333333333333333,
+    "position": "leg",
+    "fold": 0,
+    "config": "6-axis",
+    "threshold": 0.25,
+    "seed": 43
+  },
+  "SVM": {
+    "label_shuffle_macro_f1": 0.04939112026104798,
+    "chance_reference": 0.08333333333333333,
+    "position": "leg",
+    "fold": 0,
+    "config": "6-axis",
+    "threshold": 0.25,
+    "seed": 43
+  },
+  "svm_subsample_overlap_with_seed42": 0.4922
+}

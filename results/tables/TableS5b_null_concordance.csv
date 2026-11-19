@@ -1,0 +1,4 @@
+block,n_rows,spearman_mean_diff,same_sign_share,same_family_significance_share
+A_reduction_vs_6axis,168,0.9975,1.0,0.994
+B1_acc_minus_gyro_gap,36,0.9967,1.0,0.8611
+C_axis_marginal_gain,72,0.9952,1.0,1.0

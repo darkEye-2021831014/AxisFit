@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software or the results it produces, please cite the associated paper."
+title: "Placement-specific inertial-axis reduction for wearable gym exercise recognition"
+abstract: >-
+  Evaluation of 30 axis configurations, from the full six-axis inertial set
+  through drop-one subsets, same-sensor and mixed accelerometer-gyroscope
+  pairs, pure triples and single axes, on the public RecGym dataset at three
+  body positions (wrist, pocket, calf), scored by macro-F1 under
+  leave-one-subject-out validation. Axis-level reduction is shown to be a
+  placement-specific decision rather than a universal saving.
+type: software
+version: 2.0.0
+date-released: "2026-11-19"
+license: MIT
+repository-code: "https://github.com/darkEye-2021831014/AxisFit"
+url: "https://github.com/darkEye-2021831014/AxisFit"
+keywords:
+  - wearable sensors
+  - human activity recognition
+  - gym exercise recognition
+  - inertial sensors
+  - sensor reduction
+  - leave-one-subject-out validation
+  - RecGym
+authors:
+  - family-names: Islam
+    given-names: Ashraful
+    affiliation: "Shahjalal University of Science and Technology"
+    orcid: "https://orcid.org/0009-0009-9792-0746"

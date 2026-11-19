@@ -1,0 +1,74 @@
+{
+  "configs": {
+    "6-axis": [
+      "Ax",
+      "Ay",
+      "Az",
+      "Gx",
+      "Gy",
+      "Gz"
+    ],
+    "acc-3": [
+      "Ax",
+      "Ay",
+      "Az"
+    ],
+    "gyro-3": [
+      "Gx",
+      "Gy",
+      "Gz"
+    ],
+    "acc-AxAy": [
+      "Ax",
+      "Ay"
+    ],
+    "acc-AxAz": [
+      "Ax",
+      "Az"
+    ],
+    "acc-AyAz": [
+      "Ay",
+      "Az"
+    ],
+    "gyro-GxGy": [
+      "Gx",
+      "Gy"
+    ],
+    "gyro-GxGz": [
+      "Gx",
+      "Gz"
+    ],
+    "gyro-GyGz": [
+      "Gy",
+      "Gz"
+    ],
+    "single-Ax": [
+      "Ax"
+    ],
+    "single-Ay": [
+      "Ay"
+    ],
+    "single-Az": [
+      "Az"
+    ],
+    "single-Gx": [
+      "Gx"
+    ],
+    "single-Gy": [
+      "Gy"
+    ],
+    "single-Gz": [
+      "Gz"
+    ]
+  },
+  "excluded_channel": "C1 (capacitance) \u2014 not used in primary experiments",
+  "channels": {
+    "Ax": "A_x",
+    "Ay": "A_y",
+    "Az": "A_z",
+    "Gx": "G_x",
+    "Gy": "G_y",
+    "Gz": "G_z",
+    "C1": "C_1"
+  }
+}

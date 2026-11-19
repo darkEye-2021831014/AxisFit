@@ -1,0 +1,89 @@
+{
+  "hash": "1df562cd7e0c301992060814c69dad56a5fd7a158091568828be23d0001ea4ce",
+  "design": {
+    "window_samples": 80,
+    "step": 40,
+    "fs": 20,
+    "labels": [
+      "Adductor",
+      "ArmCurl",
+      "BenchPress",
+      "LegCurl",
+      "LegPress",
+      "Null",
+      "Riding",
+      "RopeSkipping",
+      "Running",
+      "Squat",
+      "StairClimber",
+      "Walking"
+    ],
+    "subjects": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "lat_fold": 0,
+    "rf": {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt",
+      "class_weight": "balanced_subsample",
+      "n_jobs": -1,
+      "random_state": 42
+    },
+    "svm": {
+      "kernel": "rbf",
+      "C": 1.0,
+      "gamma": "scale",
+      "class_weight": "balanced",
+      "cache_size": 1000,
+      "random_state": 42
+    },
+    "svm_cap": 15000,
+    "xgb": {
+      "n_estimators": 300,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "tree_method": "hist",
+      "n_jobs": -1,
+      "random_state": 42
+    },
+    "cnn": {
+      "widths": [
+        32,
+        64,
+        128
+      ],
+      "kernels": [
+        5,
+        5,
+        3
+      ],
+      "dropout": 0.3
+    },
+    "train": {
+      "epochs": 25,
+      "batch_size": 256,
+      "max_lr": 0.003,
+      "weight_decay": 0.001
+    },
+    "n_time_windows": 300,
+    "n_passes": 3,
+    "n_warmup": 30,
+    "data_sha256": "2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9",
+    "windows_sha256": "d12f06d035e1259148d0eff38258a2df1aed571fcc6d31e33592386ff5c290d6",
+    "smoke": false,
+    "seed": 42
+  }
+}

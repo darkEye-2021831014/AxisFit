@@ -1,0 +1,9 @@
+seed_label,position,config,n_models,n_meet,models_meeting
+42,leg,gyro-3,4,4,"CNN,RF,SVM,XGB"
+43,leg,gyro-3,4,3,"CNN,RF,XGB"
+44,leg,gyro-3,4,4,"CNN,RF,SVM,XGB"
+44,leg,gyro-GyGz,4,1,CNN
+45,leg,gyro-3,1,1,CNN
+46,leg,gyro-3,1,1,CNN
+mean,leg,gyro-3,4,4,"CNN,RF,SVM,XGB"
+mean,pocket,acc-3,4,1,RF

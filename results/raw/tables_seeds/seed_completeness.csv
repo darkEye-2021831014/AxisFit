@@ -1,0 +1,15 @@
+model,seed,n_units,expected,complete,missing
+CNN,42,450,450,True,0
+CNN,43,450,450,True,0
+CNN,44,450,450,True,0
+CNN,45,450,450,True,0
+CNN,46,450,450,True,0
+RF,42,450,450,True,0
+RF,43,450,450,True,0
+RF,44,450,450,True,0
+SVM,42,450,450,True,0
+SVM,43,450,450,True,0
+SVM,44,450,450,True,0
+XGB,42,450,450,True,0
+XGB,43,450,450,True,0
+XGB,44,450,450,True,0

@@ -1,0 +1,94 @@
+{
+  "checks/latency_note.txt": {
+    "bytes": 702,
+    "sha256": "32f059669d51faa64bd833fad9b079e3258e08c96a480be2039092d363a952c7"
+  },
+  "checks/latency_qc.json": {
+    "bytes": 967,
+    "sha256": "484e6401987708ca368197786a39f599163aa83ffbd53a63a2cd0b682b3297b8"
+  },
+  "cpu_info.txt": {
+    "bytes": 3351,
+    "sha256": "6b77ea2906f37ce5676944f8ff237b61dfa9b64e420e6e520d9aa1ae31034a9f"
+  },
+  "environment.json": {
+    "bytes": 1942,
+    "sha256": "1da0bc890f5b624f176b5495037f9c52d4d1da3196b94275daf726c9bd329d0f"
+  },
+  "figures/FL1_latency_and_size_vs_channels.pdf": {
+    "bytes": 22380,
+    "sha256": "1dbe5abc1aa4b5e07107dd209f26ae2b505f6bfc5cb688c1657994556cba1383"
+  },
+  "figures/FL1_latency_and_size_vs_channels.png": {
+    "bytes": 163007,
+    "sha256": "af73e25e58209715e36330d50acd43ecdd95524966dc4f4ec58ffb3b56d013ef"
+  },
+  "figures/FL2_preparation_vs_inference.pdf": {
+    "bytes": 17236,
+    "sha256": "ccc83cc24f9802b0f93b5a9394298a41604fc9d1fe7f66bdaaee4f1bbc440e70"
+  },
+  "figures/FL2_preparation_vs_inference.png": {
+    "bytes": 99495,
+    "sha256": "baf6ca152ec372bb24926ecbae2a9b2068c8805901820a02739d837a3b80e516"
+  },
+  "figures/FL3_data_volume_vs_channels.pdf": {
+    "bytes": 15567,
+    "sha256": "123a1b170b9e85a711b31038fd59f84db0fce5a65c43c87fd855ea320e855c48"
+  },
+  "figures/FL3_data_volume_vs_channels.png": {
+    "bytes": 108844,
+    "sha256": "b44e06cebb8ca56a1b58e43f49079609a1bae97f8db1492611c848658e5a8569"
+  },
+  "figures/FL4_pareto_f1_vs_data_rate.pdf": {
+    "bytes": 40745,
+    "sha256": "916a68fd5afcc6ac87b41ed3fd59806bf477b991c2ab2ad5fce26e28a4ba1ec1"
+  },
+  "figures/FL4_pareto_f1_vs_data_rate.png": {
+    "bytes": 490462,
+    "sha256": "f0e69baccdd0e8ea032a7379727cae832de52c459de0f26b2776ad4dfdaaa764"
+  },
+  "figures/FL5_pareto_f1_vs_latency.pdf": {
+    "bytes": 45478,
+    "sha256": "7516cbfc2294add4725edcf6de40143a0ad9823ce45621010079a5cd98495a49"
+  },
+  "figures/FL5_pareto_f1_vs_latency.png": {
+    "bytes": 526051,
+    "sha256": "9e6fef8de5856fd1ddb5044ee5bbc3c9aae64f39818fe799fa23a40a17903cdc"
+  },
+  "results.csv": {
+    "bytes": 149486,
+    "sha256": "8d8cfeca9d6ae7e6d34f09c5ef8cb4a55bcc33470f4de6e1d197fe0c8399c53a"
+  },
+  "run_config.json": {
+    "bytes": 1739,
+    "sha256": "232194face7707710e259f0bf61352bc98c967506d2aec9479e8300de214346b"
+  },
+  "run_log.txt": {
+    "bytes": 52394,
+    "sha256": "2dc72c971947cfc92b86e796bf4f1e5545ef167530983393f036e617c6a7d6a1"
+  },
+  "tables/TableL1_latency_by_unit.csv": {
+    "bytes": 142119,
+    "sha256": "3840046a730833a03e360a532f9e48653290e7fbfcb8257f0ed14c5cfe494cec"
+  },
+  "tables/TableL2_cost_by_channel_count.csv": {
+    "bytes": 10530,
+    "sha256": "d3e96cdcc0116e57bf22fe9b3e48cca785996d90d7464e56d63d827fae138254"
+  },
+  "tables/TableL3_cost_by_position_channel_count.csv": {
+    "bytes": 30582,
+    "sha256": "5bd8d26f0446ac81615d255987eecee9f8896b1666f6bf8afe597d19683bc051"
+  },
+  "tables/TableL4_data_volume.csv": {
+    "bytes": 2968,
+    "sha256": "8e772620ded73ec033b2e126d144e0aa2ffcba45a8766e3496087dcce5622624"
+  },
+  "tables/TableL5_pareto.csv": {
+    "bytes": 31172,
+    "sha256": "9b29c59fa1773178662b1eb76427e6beee07eb32a101b0a3c72b442b29fc1cd6"
+  },
+  "tables/TableL6_measurement_quality.csv": {
+    "bytes": 59568,
+    "sha256": "0a54493107cfc840d15a70e285a8d475287df6b2e62aabeade2bf860e31ccea9"
+  }
+}

@@ -1,0 +1,16 @@
+config,sensor_group,size,channels,n_channels,data_rate_Hz,classical_feature_dim,cnn_input_shape
+6-axis,full IMU,six,"Ax, Ay, Az, Gx, Gy, Gz",6,120,90,6 × 80
+acc-3,accelerometer,triple,"Ax, Ay, Az",3,60,45,3 × 80
+gyro-3,gyroscope,triple,"Gx, Gy, Gz",3,60,45,3 × 80
+acc-AxAy,accelerometer,pair,"Ax, Ay",2,40,30,2 × 80
+acc-AxAz,accelerometer,pair,"Ax, Az",2,40,30,2 × 80
+acc-AyAz,accelerometer,pair,"Ay, Az",2,40,30,2 × 80
+gyro-GxGy,gyroscope,pair,"Gx, Gy",2,40,30,2 × 80
+gyro-GxGz,gyroscope,pair,"Gx, Gz",2,40,30,2 × 80
+gyro-GyGz,gyroscope,pair,"Gy, Gz",2,40,30,2 × 80
+single-Ax,single axis (accelerometer),single,Ax,1,20,15,1 × 80
+single-Ay,single axis (accelerometer),single,Ay,1,20,15,1 × 80
+single-Az,single axis (accelerometer),single,Az,1,20,15,1 × 80
+single-Gx,single axis (gyroscope),single,Gx,1,20,15,1 × 80
+single-Gy,single axis (gyroscope),single,Gy,1,20,15,1 × 80
+single-Gz,single axis (gyroscope),single,Gz,1,20,15,1 × 80

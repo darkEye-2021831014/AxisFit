@@ -1,0 +1,367 @@
+{
+  "hash": "10323056f69914272dc54d1ac96295a2e27522eeef3fc0e70b4b62f6ba3d6fc5",
+  "design": {
+    "window_samples": 80,
+    "step": 40,
+    "fs": 20,
+    "features": [
+      "mean",
+      "std",
+      "min",
+      "max",
+      "median",
+      "iqr",
+      "rms",
+      "skew",
+      "kurt",
+      "mad",
+      "zcr",
+      "dom_freq",
+      "spec_energy",
+      "spec_entropy",
+      "spec_centroid"
+    ],
+    "labels": [
+      "Adductor",
+      "ArmCurl",
+      "BenchPress",
+      "LegCurl",
+      "LegPress",
+      "Null",
+      "Riding",
+      "RopeSkipping",
+      "Running",
+      "Squat",
+      "StairClimber",
+      "Walking"
+    ],
+    "positions": [
+      "leg",
+      "pocket",
+      "wrist"
+    ],
+    "subjects": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "rf": {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt",
+      "class_weight": "balanced_subsample",
+      "n_jobs": -1,
+      "random_state": 42
+    },
+    "svm": {
+      "kernel": "rbf",
+      "C": 1.0,
+      "gamma": "scale",
+      "class_weight": "balanced",
+      "cache_size": 1000,
+      "random_state": 42
+    },
+    "svm_cap": 15000,
+    "xgb": {
+      "n_estimators": 300,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "tree_method": "hist",
+      "n_jobs": -1,
+      "random_state": 42
+    },
+    "cnn": {
+      "widths": [
+        32,
+        64,
+        128
+      ],
+      "kernels": [
+        5,
+        5,
+        3
+      ],
+      "dropout": 0.3
+    },
+    "train": {
+      "epochs": 25,
+      "batch_size": 256,
+      "max_lr": 0.003,
+      "weight_decay": 0.001
+    },
+    "data_sha256": "2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9",
+    "windows_sha256": "d12f06d035e1259148d0eff38258a2df1aed571fcc6d31e33592386ff5c290d6",
+    "smoke": false,
+    "seed_base": 42,
+    "lattice_new": {
+      "drop-Ax": [
+        "Ay",
+        "Az",
+        "Gx",
+        "Gy",
+        "Gz"
+      ],
+      "drop-Ay": [
+        "Ax",
+        "Az",
+        "Gx",
+        "Gy",
+        "Gz"
+      ],
+      "drop-Az": [
+        "Ax",
+        "Ay",
+        "Gx",
+        "Gy",
+        "Gz"
+      ],
+      "drop-Gx": [
+        "Ax",
+        "Ay",
+        "Az",
+        "Gy",
+        "Gz"
+      ],
+      "drop-Gy": [
+        "Ax",
+        "Ay",
+        "Az",
+        "Gx",
+        "Gz"
+      ],
+      "drop-Gz": [
+        "Ax",
+        "Ay",
+        "Az",
+        "Gx",
+        "Gy"
+      ],
+      "mix-AxAyAzGx": [
+        "Ax",
+        "Ay",
+        "Az",
+        "Gx"
+      ],
+      "mix-AxAyAzGy": [
+        "Ax",
+        "Ay",
+        "Az",
+        "Gy"
+      ],
+      "mix-AxAyAzGz": [
+        "Ax",
+        "Ay",
+        "Az",
+        "Gz"
+      ],
+      "mix-AxAyGx": [
+        "Ax",
+        "Ay",
+        "Gx"
+      ],
+      "mix-AxAyGxGy": [
+        "Ax",
+        "Ay",
+        "Gx",
+        "Gy"
+      ],
+      "mix-AxAyGxGz": [
+        "Ax",
+        "Ay",
+        "Gx",
+        "Gz"
+      ],
+      "mix-AxAyGy": [
+        "Ax",
+        "Ay",
+        "Gy"
+      ],
+      "mix-AxAyGyGz": [
+        "Ax",
+        "Ay",
+        "Gy",
+        "Gz"
+      ],
+      "mix-AxAyGz": [
+        "Ax",
+        "Ay",
+        "Gz"
+      ],
+      "mix-AxAzGx": [
+        "Ax",
+        "Az",
+        "Gx"
+      ],
+      "mix-AxAzGxGy": [
+        "Ax",
+        "Az",
+        "Gx",
+        "Gy"
+      ],
+      "mix-AxAzGxGz": [
+        "Ax",
+        "Az",
+        "Gx",
+        "Gz"
+      ],
+      "mix-AxAzGy": [
+        "Ax",
+        "Az",
+        "Gy"
+      ],
+      "mix-AxAzGyGz": [
+        "Ax",
+        "Az",
+        "Gy",
+        "Gz"
+      ],
+      "mix-AxAzGz": [
+        "Ax",
+        "Az",
+        "Gz"
+      ],
+      "mix-AxGx": [
+        "Ax",
+        "Gx"
+      ],
+      "mix-AxGxGy": [
+        "Ax",
+        "Gx",
+        "Gy"
+      ],
+      "mix-AxGxGyGz": [
+        "Ax",
+        "Gx",
+        "Gy",
+        "Gz"
+      ],
+      "mix-AxGxGz": [
+        "Ax",
+        "Gx",
+        "Gz"
+      ],
+      "mix-AxGy": [
+        "Ax",
+        "Gy"
+      ],
+      "mix-AxGyGz": [
+        "Ax",
+        "Gy",
+        "Gz"
+      ],
+      "mix-AxGz": [
+        "Ax",
+        "Gz"
+      ],
+      "mix-AyAzGx": [
+        "Ay",
+        "Az",
+        "Gx"
+      ],
+      "mix-AyAzGxGy": [
+        "Ay",
+        "Az",
+        "Gx",
+        "Gy"
+      ],
+      "mix-AyAzGxGz": [
+        "Ay",
+        "Az",
+        "Gx",
+        "Gz"
+      ],
+      "mix-AyAzGy": [
+        "Ay",
+        "Az",
+        "Gy"
+      ],
+      "mix-AyAzGyGz": [
+        "Ay",
+        "Az",
+        "Gy",
+        "Gz"
+      ],
+      "mix-AyAzGz": [
+        "Ay",
+        "Az",
+        "Gz"
+      ],
+      "mix-AyGx": [
+        "Ay",
+        "Gx"
+      ],
+      "mix-AyGxGy": [
+        "Ay",
+        "Gx",
+        "Gy"
+      ],
+      "mix-AyGxGyGz": [
+        "Ay",
+        "Gx",
+        "Gy",
+        "Gz"
+      ],
+      "mix-AyGxGz": [
+        "Ay",
+        "Gx",
+        "Gz"
+      ],
+      "mix-AyGy": [
+        "Ay",
+        "Gy"
+      ],
+      "mix-AyGyGz": [
+        "Ay",
+        "Gy",
+        "Gz"
+      ],
+      "mix-AyGz": [
+        "Ay",
+        "Gz"
+      ],
+      "mix-AzGx": [
+        "Az",
+        "Gx"
+      ],
+      "mix-AzGxGy": [
+        "Az",
+        "Gx",
+        "Gy"
+      ],
+      "mix-AzGxGyGz": [
+        "Az",
+        "Gx",
+        "Gy",
+        "Gz"
+      ],
+      "mix-AzGxGz": [
+        "Az",
+        "Gx",
+        "Gz"
+      ],
+      "mix-AzGy": [
+        "Az",
+        "Gy"
+      ],
+      "mix-AzGyGz": [
+        "Az",
+        "Gy",
+        "Gz"
+      ],
+      "mix-AzGz": [
+        "Az",
+        "Gz"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+position,config,n_units,n_flagged,max_final_loss
+leg,single-Az,50,15,0.5121257901191711
+leg,single-Gy,50,1,0.5052750706672668
+pocket,single-Ax,50,50,0.6757237315177917
+pocket,single-Ay,50,50,0.7378478050231934
+pocket,single-Az,50,50,0.6707834005355835
+pocket,single-Gx,50,50,0.7153611779212952
+pocket,single-Gy,50,50,0.6829824447631836
+pocket,single-Gz,50,50,0.577215850353241
+wrist,single-Az,50,6,0.5105539560317993
+wrist,single-Gx,50,50,0.7246347665786743
+wrist,single-Gy,50,50,0.5961657166481018

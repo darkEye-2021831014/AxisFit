@@ -1,0 +1,65 @@
+{
+  "hash": "b4fcd438b26677a20086d9bb7081030b0ec7f813e1114e3de74959462dae1dc5",
+  "design": {
+    "window_samples": 80,
+    "step": 40,
+    "fs": 20,
+    "labels": [
+      "Adductor",
+      "ArmCurl",
+      "BenchPress",
+      "LegCurl",
+      "LegPress",
+      "Null",
+      "Riding",
+      "RopeSkipping",
+      "Running",
+      "Squat",
+      "StairClimber",
+      "Walking"
+    ],
+    "positions": [
+      "leg",
+      "pocket",
+      "wrist"
+    ],
+    "subjects": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "cnn": {
+      "widths": [
+        32,
+        64,
+        128
+      ],
+      "kernels": [
+        5,
+        5,
+        3
+      ],
+      "dropout": 0.3
+    },
+    "train": {
+      "epochs": 25,
+      "batch_size": 256,
+      "max_lr": 0.003,
+      "weight_decay": 0.001
+    },
+    "data_sha256": "2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9",
+    "windows_sha256": "d12f06d035e1259148d0eff38258a2df1aed571fcc6d31e33592386ff5c290d6",
+    "smoke": false,
+    "seed_base": 42
+  },
+  "seeds": [
+    42
+  ]
+}

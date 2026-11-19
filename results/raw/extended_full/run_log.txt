@@ -1,0 +1,117 @@
+
+===== session 2026-11-09T16:21:27.173622+00:00 | chunk {"positions": ["leg", "pocket", "wrist"], "models": ["XGB", "CNN", "RF", "SVM"], "groups": ["A1", "A2"], "configs": ["drop-Ax", "drop-Ay", "drop-Az", "drop-Gx", "drop-Gy", "drop-Gz", "mix-AxGx", "mix-AxGy", "mix-AxGz", "mix-AyGx", "mix-AyGy", "mix-AyGz", "mix-AzGx", "mix-AzGy", "mix-AzGz"], "folds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "seeds": [42], "smoke_test": false, "xgb_device": "cpu", "time_budget_min": null} =====
+SMOKE_TEST = False | run dir: results/raw/extended_full | groups: ['A1', 'A2'] | models: ['XGB', 'CNN', 'RF', 'SVM'] | positions: all | folds: all | time budget (min): None
+CNN device: cuda Tesla T4
+Lattice OK: 15 primary + 48 new = 63 subsets | {'A1': 6, 'A2': 9, 'A3': 18, 'A4': 15}
+Configs this chunk ( 15 ): ['drop-Ax', 'drop-Ay', 'drop-Az', 'drop-Gx', 'drop-Gy', 'drop-Gz', 'mix-AxGx', 'mix-AxGy', 'mix-AxGz', 'mix-AyGx', 'mix-AyGy', 'mix-AyGz', 'mix-AzGx', 'mix-AzGy', 'mix-AzGz']
+SHA-256: 2031c077a57e93d6b5c39da198470cb6c9b1a3c0652ab57cfc5d6a39bfa840e9
+Hash matches the audited file.
+Loaded: (4703320, 11) ['Subject', 'Position', 'Session', 'A_x', 'A_y', 'A_z', 'G_x', 'G_y', 'G_z', 'C_1', 'Workout']
+Roles: {'subject': 'Subject', 'label': 'Workout', 'position': 'Position', 'session': 'Session'} | channels: {'Ax': 'A_x', 'Ay': 'A_y', 'Az': 'A_z', 'Gx': 'G_x', 'Gy': 'G_y', 'Gz': 'G_z'}
+Subjects: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+Positions: ['leg', 'pocket', 'wrist']
+Labels: ['Adductor', 'ArmCurl', 'BenchPress', 'LegCurl', 'LegPress', 'Null', 'Riding', 'RopeSkipping', 'Running', 'Squat', 'StairClimber', 'Walking'] | null ids: [5]
+Sessions: ['1', '2', '3', '4', '5']
+Runs: 9589 | window = 80 samples, step = 40
+Windows: 105728 | rows dropped (runs shorter than window): 40743 | window-start hash: d12f06d035e12591 ...
+VERIFIED: windows are identical to protocol/windows_index.parquet.
+VERIFIED: window-start hash equals the primary CNN run's.
+Folds verified against protocol/loso_folds.json | folds this chunk: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Feature unit tests passed for all 63 subsets (49 mixed, incl. 6-axis). 15 features per channel.
+leg: windows=33272 | features=(33272, 90) | tensor=(33272, 6, 80)
+pocket: windows=35935 | features=(35935, 90) | tensor=(35935, 6, 80)
+wrist: windows=36521 | features=(36521, 90) | tensor=(36521, 6, 80)
+Per-position data prepared in 12.2 s
+CNN (6 channels): 37772 parameters, 979456 MACs/window, 155 KB
+   1 channel(s): 36972 parameters, 915456 MACs/window
+   2 channel(s): 37132 parameters, 928256 MACs/window
+   3 channel(s): 37292 parameters, 941056 MACs/window
+   4 channel(s): 37452 parameters, 953856 MACs/window
+   5 channel(s): 37612 parameters, 966656 MACs/window
+Units already completed in extended_full : 0
+Chunk = 3 position(s) x 10 fold(s) x 15 config(s) x models ['XGB', 'CNN', 'RF', 'SVM'] = 1800 units | already done: 0 | to run: 1800
+Label-shuffle control XGB on leg fold 0 config drop-Ax: macro-F1 = 0.087 (chance ~ 0.083) in 33.0s
+Label-shuffle control RF on leg fold 0 config drop-Ax: macro-F1 = 0.058 (chance ~ 0.083) in 45.1s
+Label-shuffle control SVM on leg fold 0 config drop-Ax: macro-F1 = 0.043 (chance ~ 0.083) in 93.1s
+Check 1 passed: CNN normalisation statistics come from training subjects only.
+Label-shuffle control CNN on leg fold 0 config drop-Ax: macro-F1 = 0.023 (chance ~ 0.083) in 13.0s
+Anchor XGB 6-axis leg fold 0: here 0.7965 vs primary 0.7931 (|diff| 0.0034, tolerance 0.001) -> MISMATCH: check library versions / hardware before trusting cross-run comparisons
+Anchor CNN 6-axis leg fold 0: here 0.7451 vs primary 0.7469 (|diff| 0.0018, tolerance 0.03) -> OK
+Anchor RF 6-axis leg fold 0: here 0.7223 vs primary 0.7223 (|diff| 0.0000, tolerance 0.001) -> OK
+Anchor SVM 6-axis leg fold 0: here 0.7501 vs primary 0.7501 (|diff| 0.0000, tolerance 0.001) -> OK
+[1/1800] leg fold=0 drop-Ax XGB: macroF1=0.773 fit=21.7s | elapsed 0.4 min, ETA ~ 666.4 min
+[25/1800] leg fold=0 mix-AxGx XGB: macroF1=0.696 fit=11.6s | elapsed 7.4 min, ETA ~ 524.5 min
+[50/1800] leg fold=0 mix-AzGx CNN seed=42: macroF1=0.640 loss=0.279 fit=8.2s | elapsed 12.7 min, ETA ~ 442.9 min
+[75/1800] leg fold=1 drop-Gx RF: macroF1=0.773 fit=25.0s | elapsed 19.3 min, ETA ~ 443.6 min
+[100/1800] leg fold=1 mix-AyGx SVM: macroF1=0.552 fit=11.5s | elapsed 25.3 min, ETA ~ 430.0 min
+[125/1800] leg fold=2 drop-Ay XGB: macroF1=0.897 fit=21.4s | elapsed 31.2 min, ETA ~ 417.6 min
+[150/1800] leg fold=2 mix-AxGy CNN seed=42: macroF1=0.813 loss=0.267 fit=7.8s | elapsed 38.0 min, ETA ~ 418.3 min
+[175/1800] leg fold=2 mix-AzGy RF: macroF1=0.671 fit=16.0s | elapsed 43.5 min, ETA ~ 404.0 min
+[200/1800] leg fold=3 drop-Gy SVM: macroF1=0.778 fit=10.3s | elapsed 50.5 min, ETA ~ 403.7 min
+[225/1800] leg fold=3 mix-AyGz XGB: macroF1=0.758 fit=11.4s | elapsed 56.2 min, ETA ~ 393.6 min
+[250/1800] leg fold=4 drop-Az CNN seed=42: macroF1=0.798 loss=0.163 fit=8.0s | elapsed 62.3 min, ETA ~ 386.0 min
+[275/1800] leg fold=4 mix-AxGz RF: macroF1=0.791 fit=15.9s | elapsed 68.8 min, ETA ~ 381.7 min
+[300/1800] leg fold=4 mix-AzGz SVM: macroF1=0.780 fit=7.6s | elapsed 74.2 min, ETA ~ 370.9 min
+[325/1800] leg fold=5 mix-AxGx XGB: macroF1=0.719 fit=12.3s | elapsed 81.7 min, ETA ~ 370.6 min
+[350/1800] leg fold=5 mix-AzGx CNN seed=42: macroF1=0.608 loss=0.297 fit=8.3s | elapsed 87.0 min, ETA ~ 360.4 min
+[375/1800] leg fold=6 drop-Gx RF: macroF1=0.869 fit=25.4s | elapsed 93.7 min, ETA ~ 356.0 min
+[400/1800] leg fold=6 mix-AyGx SVM: macroF1=0.652 fit=11.8s | elapsed 99.8 min, ETA ~ 349.2 min
+[425/1800] leg fold=7 drop-Ay XGB: macroF1=0.905 fit=20.8s | elapsed 105.6 min, ETA ~ 341.6 min
+[450/1800] leg fold=7 mix-AxGy CNN seed=42: macroF1=0.739 loss=0.245 fit=8.0s | elapsed 112.3 min, ETA ~ 336.9 min
+[475/1800] leg fold=7 mix-AzGy RF: macroF1=0.571 fit=15.9s | elapsed 117.7 min, ETA ~ 328.2 min
+[500/1800] leg fold=8 drop-Gy SVM: macroF1=0.757 fit=9.0s | elapsed 124.2 min, ETA ~ 323.0 min
+[525/1800] leg fold=8 mix-AyGz XGB: macroF1=0.724 fit=11.0s | elapsed 129.8 min, ETA ~ 315.1 min
+[550/1800] leg fold=9 drop-Az CNN seed=42: macroF1=0.813 loss=0.165 fit=7.9s | elapsed 135.6 min, ETA ~ 308.2 min
+[575/1800] leg fold=9 mix-AxGz RF: macroF1=0.740 fit=16.5s | elapsed 142.2 min, ETA ~ 302.9 min
+[600/1800] leg fold=9 mix-AzGz SVM: macroF1=0.688 fit=7.2s | elapsed 147.4 min, ETA ~ 294.8 min
+[625/1800] pocket fold=0 mix-AxGx XGB: macroF1=0.487 fit=13.8s | elapsed 156.2 min, ETA ~ 293.7 min
+[650/1800] pocket fold=0 mix-AzGx CNN seed=42: macroF1=0.448 loss=0.405 fit=8.6s | elapsed 162.3 min, ETA ~ 287.1 min
+[675/1800] pocket fold=1 drop-Gx RF: macroF1=0.544 fit=27.4s | elapsed 170.1 min, ETA ~ 283.4 min
+[700/1800] pocket fold=1 mix-AyGx SVM: macroF1=0.354 fit=15.3s | elapsed 177.2 min, ETA ~ 278.4 min
+[725/1800] pocket fold=2 drop-Ay XGB: macroF1=0.664 fit=26.2s | elapsed 183.9 min, ETA ~ 272.7 min
+[750/1800] pocket fold=2 mix-AxGy CNN seed=42: macroF1=0.649 loss=0.405 fit=8.4s | elapsed 191.9 min, ETA ~ 268.7 min
+[775/1800] pocket fold=2 mix-AzGy RF: macroF1=0.363 fit=17.3s | elapsed 198.2 min, ETA ~ 262.1 min
+[800/1800] pocket fold=3 drop-Gy SVM: macroF1=0.611 fit=14.4s | elapsed 206.4 min, ETA ~ 258.0 min
+[825/1800] pocket fold=3 mix-AyGz XGB: macroF1=0.579 fit=13.5s | elapsed 213.0 min, ETA ~ 251.7 min
+[850/1800] pocket fold=4 drop-Az CNN seed=42: macroF1=0.620 loss=0.202 fit=8.4s | elapsed 220.0 min, ETA ~ 245.8 min
+[875/1800] pocket fold=4 mix-AxGz RF: macroF1=0.539 fit=17.5s | elapsed 227.6 min, ETA ~ 240.6 min
+[900/1800] pocket fold=4 mix-AzGz SVM: macroF1=0.565 fit=12.2s | elapsed 233.8 min, ETA ~ 233.8 min
+[925/1800] pocket fold=5 mix-AxGx XGB: macroF1=0.552 fit=13.6s | elapsed 242.6 min, ETA ~ 229.5 min
+[950/1800] pocket fold=5 mix-AzGx CNN seed=42: macroF1=0.520 loss=0.425 fit=8.2s | elapsed 248.6 min, ETA ~ 222.4 min
+[975/1800] pocket fold=6 drop-Gx RF: macroF1=0.597 fit=28.1s | elapsed 256.4 min, ETA ~ 216.9 min
+[1000/1800] pocket fold=6 mix-AyGx SVM: macroF1=0.416 fit=15.7s | elapsed 263.5 min, ETA ~ 210.8 min
+[1025/1800] pocket fold=7 drop-Ay XGB: macroF1=0.695 fit=26.0s | elapsed 270.2 min, ETA ~ 204.3 min
+[1050/1800] pocket fold=7 mix-AxGy CNN seed=42: macroF1=0.547 loss=0.402 fit=8.6s | elapsed 278.1 min, ETA ~ 198.6 min
+[1075/1800] pocket fold=7 mix-AzGy RF: macroF1=0.467 fit=17.6s | elapsed 284.4 min, ETA ~ 191.8 min
+[1100/1800] pocket fold=8 drop-Gy SVM: macroF1=0.419 fit=15.3s | elapsed 292.6 min, ETA ~ 186.2 min
+[1125/1800] pocket fold=8 mix-AyGz XGB: macroF1=0.438 fit=13.6s | elapsed 299.2 min, ETA ~ 179.5 min
+[1150/1800] pocket fold=9 drop-Az CNN seed=42: macroF1=0.677 loss=0.212 fit=8.4s | elapsed 306.1 min, ETA ~ 173.0 min
+[1175/1800] pocket fold=9 mix-AxGz RF: macroF1=0.568 fit=17.8s | elapsed 313.8 min, ETA ~ 166.9 min
+[1200/1800] pocket fold=9 mix-AzGz SVM: macroF1=0.570 fit=12.0s | elapsed 319.9 min, ETA ~ 160.0 min
+[1225/1800] wrist fold=0 mix-AxGx XGB: macroF1=0.815 fit=12.2s | elapsed 327.3 min, ETA ~ 153.6 min
+[1250/1800] wrist fold=0 mix-AzGx CNN seed=42: macroF1=0.753 loss=0.219 fit=8.5s | elapsed 332.7 min, ETA ~ 146.4 min
+[1275/1800] wrist fold=1 drop-Gx RF: macroF1=0.861 fit=28.5s | elapsed 339.4 min, ETA ~ 139.8 min
+[1300/1800] wrist fold=1 mix-AyGx SVM: macroF1=0.621 fit=9.9s | elapsed 345.4 min, ETA ~ 132.9 min
+[1325/1800] wrist fold=2 drop-Ay XGB: macroF1=0.940 fit=21.1s | elapsed 351.4 min, ETA ~ 126.0 min
+[1350/1800] wrist fold=2 mix-AxGy CNN seed=42: macroF1=0.894 loss=0.118 fit=8.6s | elapsed 358.3 min, ETA ~ 119.4 min
+[1375/1800] wrist fold=2 mix-AzGy RF: macroF1=0.770 fit=18.3s | elapsed 363.9 min, ETA ~ 112.5 min
+[1400/1800] wrist fold=3 drop-Gy SVM: macroF1=0.820 fit=8.1s | elapsed 370.8 min, ETA ~ 105.9 min
+[1425/1800] wrist fold=3 mix-AyGz XGB: macroF1=0.849 fit=12.1s | elapsed 376.5 min, ETA ~ 99.1 min
+[1450/1800] wrist fold=4 drop-Az CNN seed=42: macroF1=0.955 loss=0.042 fit=8.6s | elapsed 382.7 min, ETA ~ 92.4 min
+[1475/1800] wrist fold=4 mix-AxGz RF: macroF1=0.729 fit=18.9s | elapsed 389.5 min, ETA ~ 85.8 min
+[1500/1800] wrist fold=4 mix-AzGz SVM: macroF1=0.721 fit=8.3s | elapsed 395.0 min, ETA ~ 79.0 min
+[1525/1800] wrist fold=5 mix-AxGx XGB: macroF1=0.778 fit=12.0s | elapsed 402.3 min, ETA ~ 72.5 min
+[1550/1800] wrist fold=5 mix-AzGx CNN seed=42: macroF1=0.710 loss=0.251 fit=8.6s | elapsed 407.6 min, ETA ~ 65.7 min
+[1575/1800] wrist fold=6 drop-Gx RF: macroF1=0.908 fit=29.5s | elapsed 414.6 min, ETA ~ 59.2 min
+[1600/1800] wrist fold=6 mix-AyGx SVM: macroF1=0.676 fit=11.0s | elapsed 420.7 min, ETA ~ 52.6 min
+[1625/1800] wrist fold=7 drop-Ay XGB: macroF1=0.967 fit=20.8s | elapsed 426.7 min, ETA ~ 46.0 min
+[1650/1800] wrist fold=7 mix-AxGy CNN seed=42: macroF1=0.875 loss=0.122 fit=8.6s | elapsed 433.6 min, ETA ~ 39.4 min
+[1675/1800] wrist fold=7 mix-AzGy RF: macroF1=0.849 fit=18.5s | elapsed 439.3 min, ETA ~ 32.8 min
+[1700/1800] wrist fold=8 drop-Gy SVM: macroF1=0.865 fit=8.4s | elapsed 446.4 min, ETA ~ 26.3 min
+[1725/1800] wrist fold=8 mix-AyGz XGB: macroF1=0.852 fit=12.4s | elapsed 452.2 min, ETA ~ 19.7 min
+[1750/1800] wrist fold=9 drop-Az CNN seed=42: macroF1=0.928 loss=0.043 fit=8.6s | elapsed 458.4 min, ETA ~ 13.1 min
+[1775/1800] wrist fold=9 mix-AxGz RF: macroF1=0.893 fit=19.1s | elapsed 465.2 min, ETA ~ 6.6 min
+[1800/1800] wrist fold=9 mix-AzGz SVM: macroF1=0.645 fit=8.1s | elapsed 470.7 min, ETA ~ 0.0 min
+Loop finished. New units this session: 1800 | chunk units done: 1800 of 1800 | stopped early: False
+Rows in results.csv: 1800 | chunk units present: 1800 of 1800 | COMPLETE
+CNN units with final_train_loss > 0.5 (descriptive; WP-B reports them): 0 of 450

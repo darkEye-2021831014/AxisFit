@@ -1,0 +1,168 @@
+{
+  "notebook": "04c_seed_analysis",
+  "timestamp_utc": "2026-11-12T13:15:59.855205+00:00",
+  "parameters": {
+    "N_BOOT": 10000,
+    "BOOT_RNG_SEED": 20260101,
+    "MARGIN": 0.05,
+    "UNDERFIT_LOSS": 0.5,
+    "ALPHA": 0.05,
+    "holm_family": "14 reduced configurations per position, model and seed",
+    "STRICT": false
+  },
+  "seeds_used": {
+    "RF": [
+      42,
+      43,
+      44
+    ],
+    "SVM": [
+      42,
+      43,
+      44
+    ],
+    "XGB": [
+      42,
+      43,
+      44
+    ],
+    "CNN": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "expected_seeds": {
+    "classical": [
+      42,
+      43,
+      44
+    ],
+    "CNN": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3"
+  },
+  "inputs": [
+    {
+      "file": "/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_full/results.csv",
+      "role": "classical seed 42",
+      "sha256": "aa75dc5475d8ea036b7667e07263de549b00e332f2fd49ad62df73be2f817665"
+    },
+    {
+      "file": "/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed43/results.csv",
+      "role": "classical seed 43",
+      "sha256": "f92f7d47e4bad99ea1298e7be0ecd40e7095929a095e6c873adad3a351f27d37"
+    },
+    {
+      "file": "/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/classical_seed44/results.csv",
+      "role": "classical seed 44",
+      "sha256": "0f16503283008547288633a4bf10a4719cbada33366ebb3a64d362571be68c90"
+    },
+    {
+      "file": "/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_full/results.csv",
+      "role": "CNN primary folder",
+      "sha256": "27e346c989cc6a23bc96694c239ba6edda6069816bb404ddd90e0d3172c81639"
+    },
+    {
+      "file": "/kaggle/input/datasets/chaoseye/neededdata/AxisFit_kaggle_input/results/raw/cnn_seeds43-46_full/results.csv",
+      "role": "CNN extra seeds",
+      "sha256": "6651296920b1ca3435813bbdaac42a908adadb0ea6a4ef820d5189199e8df783"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "cnn_underfit_by_channels.csv",
+      "sha256": "3ae85ce25061c2cecc3871eea444df99aaba53011994f1f073bed2867408048c",
+      "rows": 4
+    },
+    {
+      "file": "cnn_underfit_by_config.csv",
+      "sha256": "ba12d6370f88a26feb082651b7b97ac60b71dcbac6ff0abdcd820d26cca6e9d5",
+      "rows": 45
+    },
+    {
+      "file": "cnn_underfit_by_seed.csv",
+      "sha256": "02b27df4ce4fdf47a8e8893176592c6ae4abc373da4e516ce703e7bca3c2b83b",
+      "rows": 5
+    },
+    {
+      "file": "cnn_underfit_units.csv",
+      "sha256": "80aa74e6d7973a65e48316b188919f1a32b3c65bf8c134f3f4953a2b1f374c56",
+      "rows": 422
+    },
+    {
+      "file": "figures/F_seed_sd_by_channels.pdf",
+      "sha256": "7c21fc3bf378cc7fb2e4737d59321be3468945e3f598a97665998daa5df8bf55"
+    },
+    {
+      "file": "figures/F_seed_sd_by_channels.png",
+      "sha256": "0d8acd0521a8d0074b0634480c1586455748005c385e316c6fe41d81cd097650"
+    },
+    {
+      "file": "holm_counts_by_seed.csv",
+      "sha256": "cb0bf747778abb39cf0a15b403ceee1b2d335c6bc03e898cf92559b012938557",
+      "rows": 22
+    },
+    {
+      "file": "margin_claim_by_seed.csv",
+      "sha256": "663743a61f231fbc7241a214303d94fa6df03d00991fb986d5a0ad74c4ac4cce",
+      "rows": 252
+    },
+    {
+      "file": "margin_claim_summary.csv",
+      "sha256": "f53a5a162f87bcc71c29cf90315c18e8af214379c35ee1c5e1347116e2e1abdf",
+      "rows": 6
+    },
+    {
+      "file": "not_significant_agreement_across_seeds.csv",
+      "sha256": "8c57c97918ef21b31eb9d95a78ea460fd5fd49a348e1fddcc8f5ec277818ebf0",
+      "rows": 11
+    },
+    {
+      "file": "not_significant_reductions_by_seed.csv",
+      "sha256": "bfa2f8e53f23189dca64c65e7aae2aed99b37033a51be5aabb37e3732a3f7c24",
+      "rows": 30
+    },
+    {
+      "file": "reduction_tests_by_seed.csv",
+      "sha256": "13f58830f41f00665b5a6d93fcece5896d34790679c06002b2821175d5cde783",
+      "rows": 756
+    },
+    {
+      "file": "seed_completeness.csv",
+      "sha256": "5e59c94499cc4509c2ec1acd1f39d41995b0c253c860524c003fcc8b0175041e",
+      "rows": 14
+    },
+    {
+      "file": "seed_headline_6axis.csv",
+      "sha256": "db92c92b09c56d0b6a1596997e9c8da504f21a93b75bef5d14ecd90fb7323b8b",
+      "rows": 12
+    },
+    {
+      "file": "seed_sd_by_model.csv",
+      "sha256": "c18038f035e1795ab59a360414352fbc51b248026808444f7d0408c8d40c8736",
+      "rows": 4
+    },
+    {
+      "file": "seed_sd_by_model_channels.csv",
+      "sha256": "28726d97fd36abd85df43f2d014010d06f69dc5537bd7bd51ea8d4b84b335fb6",
+      "rows": 16
+    },
+    {
+      "file": "seed_variability_cells.csv",
+      "sha256": "6f24477d029ed3bd8bbfa71e27c7c28f8356a74479cc74aac6dd48de4b5c5b35",
+      "rows": 180
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "XGB": {
+    "label_shuffle_macro_f1": 0.08712745192716713,
+    "chance_reference": 0.08333333333333333,
+    "position": "leg",
+    "fold": 0,
+    "config": "drop-Ax",
+    "threshold": 0.25
+  },
+  "RF": {
+    "label_shuffle_macro_f1": 0.057629188611556366,
+    "chance_reference": 0.08333333333333333,
+    "position": "leg",
+    "fold": 0,
+    "config": "drop-Ax",
+    "threshold": 0.25
+  },
+  "SVM": {
+    "label_shuffle_macro_f1": 0.042776264436966804,
+    "chance_reference": 0.08333333333333333,
+    "position": "leg",
+    "fold": 0,
+    "config": "drop-Ax",
+    "threshold": 0.25
+  },
+  "CNN": {
+    "label_shuffle_macro_f1": 0.023272047033394277,
+    "chance_reference": 0.08333333333333333,
+    "position": "leg",
+    "fold": 0,
+    "config": "drop-Ax",
+    "threshold": 0.25
+  }
+}

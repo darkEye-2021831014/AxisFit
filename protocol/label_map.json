@@ -1,0 +1,14 @@
+{
+  "Adductor": 0,
+  "ArmCurl": 1,
+  "BenchPress": 2,
+  "LegCurl": 3,
+  "LegPress": 4,
+  "Null": 5,
+  "Riding": 6,
+  "RopeSkipping": 7,
+  "Running": 8,
+  "Squat": 9,
+  "StairClimber": 10,
+  "Walking": 11
+}
